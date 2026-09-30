@@ -3,6 +3,8 @@ import { getViewer, can } from "@/lib/auth/session";
 import { apiError, gateError, json, parseBody } from "@/lib/api/http";
 import { FiltersSchema, EntityTypeSchema } from "@/lib/api/schemas";
 import { checkCount } from "@/lib/billing/entitlements";
+import { resolveDataMode } from "@/lib/config/env";
+import { seedDemoDocketBaseline } from "@/lib/radar/snapshots";
 import { getRepo } from "@/lib/data/repo";
 import { getPrimaryProvider } from "@/lib/providers/registry";
 import { trackEvent } from "@/lib/analytics/track";
@@ -48,6 +50,7 @@ export async function POST(req: Request) {
   if (!gate.allowed) return gateError(gate);
   const watch = await repo.createWatchlist({ ...body.data, query: { ...body.data.query, provider: "courtlistener" } });
   if (active === 0) trackEvent("first_alert_created", { userId: viewer.userId, props: { kind: body.data.kind } });
+  if (viewer.demo && resolveDataMode() === "demo" && body.data.kind === "docket") await seedDemoDocketBaseline(viewer.userId!, watch.id, body.data.query.docketId!);
 
   // Optional: register a provider-side monitor so updates can arrive by webhook.
   const monitor = await getPrimaryProvider().createMonitor(

@@ -7,7 +7,9 @@ import { createSupabaseServer } from "@/lib/supabase/server";
 import { getSupabaseAdmin } from "@/lib/supabase/admin";
 
 export const DEMO_COOKIE = "lsa_demo_plan";
-export const DEMO_USER_ID = "00000000-0000-4000-8000-000000000de0";
+/** Per-browser demo workspace id, so demo visitors never see each other's projects or alerts. */
+export const DEMO_ID_COOKIE = "lsa_demo_id";
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
 export interface SubscriptionSummary {
   id: string;
@@ -43,8 +45,9 @@ export const getViewer = cache(async (): Promise<Viewer> => {
   if (!features.supabase()) {
     const store = await cookies();
     const demoPlan = store.get(DEMO_COOKIE)?.value as PlanId | undefined;
-    if (demoPlan && resolveDataMode() === "demo" && ["free", "search", "research_pro", "intelligence"].includes(demoPlan)) {
-      return { kind: "demo", userId: DEMO_USER_ID, email: "demo@workspace.local", plan: demoPlan, subscription: null, isAdmin: true, demo: true };
+    const demoId = store.get(DEMO_ID_COOKIE)?.value ?? "";
+    if (demoPlan && UUID_RE.test(demoId) && resolveDataMode() === "demo" && ["free", "search", "research_pro", "intelligence"].includes(demoPlan)) {
+      return { kind: "demo", userId: demoId, email: "demo@workspace.local", plan: demoPlan, subscription: null, isAdmin: true, demo: true };
     }
     return { kind: "anonymous", userId: null, email: null, plan: "free", subscription: null, isAdmin: false, demo: false };
   }

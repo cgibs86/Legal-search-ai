@@ -156,7 +156,7 @@ export function CaseViewer({ id, features, signedIn }: { id: string; features: R
           id={id}
           enabled={features.aiCaseBrief}
           onUpgrade={() => setUpgrade("aiCaseBrief")}
-          onSave={(brief) => setSaveTarget({ kind: "ai_summary", title: `AI Case Brief — ${r.caseName}`, ref: { clusterId: id, recordKey: r.key, generatedAt: brief.generatedAt }, note: brief.sections.flatMap((s) => s.statements.map((x) => x.text)).join("\n") })}
+          onSave={(brief) => setSaveTarget({ kind: "ai_summary", title: `AI Case Brief — ${r.caseName}`, ref: { clusterId: id, recordKey: r.key, brief } })}
         />
       </div>
 

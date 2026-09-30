@@ -90,7 +90,7 @@ export const PLANS: Record<PlanId, Plan> = {
       seats: 1,
     },
     features: { ...none },
-    highlights: ["Unlimited searches (rate-limited)", "Match counts and Coverage Ledger", "Jurisdictions and date range"],
+    highlights: ["Free searches (rate-limited)", "Match counts and Coverage Ledger", "Jurisdictions and date range"],
   },
   search: {
     id: "search",

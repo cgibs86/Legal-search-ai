@@ -19,13 +19,24 @@ interface Store {
 const g = globalThis as unknown as { __lsaMemory?: Map<string, Store> };
 g.__lsaMemory ??= new Map();
 
+/** Demo workspaces kept in memory at once; the least recently used is dropped beyond this. */
+const MAX_DEMO_WORKSPACES = 500;
+
 export function memoryStore(userId: string): Store {
-  let s = g.__lsaMemory!.get(userId);
-  if (!s) {
+  const m = g.__lsaMemory!;
+  let s = m.get(userId);
+  if (s) {
+    m.delete(userId); // re-insert to mark as most recently used
+  } else {
     s = { savedSearches: [], projects: [], items: [], watchlists: [], alerts: [], corrections: [] };
-    g.__lsaMemory!.set(userId, s);
+    while (m.size >= MAX_DEMO_WORKSPACES) m.delete(m.keys().next().value!);
   }
+  m.set(userId, s);
   return s;
+}
+
+export function dropMemoryStore(userId: string) {
+  g.__lsaMemory!.delete(userId);
 }
 
 export function allMemoryStores(): [string, Store][] {

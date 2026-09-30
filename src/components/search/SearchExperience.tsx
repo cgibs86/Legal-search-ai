@@ -23,6 +23,7 @@ import { AskPanel } from "./AskPanel";
 import { IdentityLocked, IdentityPanel } from "@/components/identity/IdentityPanel";
 import { GraphView } from "@/components/graph/GraphView";
 import { EntityTimeline } from "@/components/timeline/TimelineView";
+import { filtersFromParams, filtersToParams } from "@/lib/search/urlParams";
 import { GateNotice, LockedFeature, SaveToProjectDialog, UpgradeDialog, WatchDialog, type SaveTarget, type WatchTarget } from "@/components/workspace/dialogs";
 
 type Features = Record<FeatureKey, boolean>;
@@ -37,34 +38,7 @@ interface Props {
 
 type ApiSearchResponse = SearchResponse & { suggestedVariants: { text: string; explanation: string }[]; entityType: EntityType; error: string | null };
 
-const csv = (v: string | null) => (v ? v.split(",").filter(Boolean) : undefined);
 
-export function filtersFromParams(p: URLSearchParams): SearchFilters {
-  const f: SearchFilters = {
-    matchTypes: csv(p.get("mt")) as MatchType[] | undefined,
-    recordKinds: csv(p.get("rk")) as RecordKind[] | undefined,
-    partyKind: (p.get("pk") as SearchFilters["partyKind"]) ?? undefined,
-    jurisdiction: (p.get("j") as SearchFilters["jurisdiction"]) ?? undefined,
-    states: csv(p.get("st")),
-    courts: csv(p.get("ct")),
-    categories: csv(p.get("cat")) as CaseCategory[] | undefined,
-    status: (p.get("s") as SearchFilters["status"]) ?? undefined,
-    filedAfter: p.get("fa") ?? undefined,
-    filedBefore: p.get("fb") ?? undefined,
-    terminatedAfter: p.get("ta") ?? undefined,
-    terminatedBefore: p.get("tb") ?? undefined,
-  };
-  return Object.fromEntries(Object.entries(f).filter(([, v]) => v !== undefined && v !== "")) as SearchFilters;
-}
-
-function filtersToParams(f: SearchFilters, p: URLSearchParams) {
-  const map: [keyof SearchFilters, string][] = [["matchTypes", "mt"], ["recordKinds", "rk"], ["partyKind", "pk"], ["jurisdiction", "j"], ["states", "st"], ["courts", "ct"], ["categories", "cat"], ["status", "s"], ["filedAfter", "fa"], ["filedBefore", "fb"], ["terminatedAfter", "ta"], ["terminatedBefore", "tb"]];
-  for (const [k, param] of map) {
-    const v = f[k];
-    if (v === undefined || (Array.isArray(v) && !v.length)) p.delete(param);
-    else p.set(param, Array.isArray(v) ? v.join(",") : String(v));
-  }
-}
 
 export function SearchExperience({ features, signedIn, authEnabled, planName }: Props) {
   const params = useSearchParams();

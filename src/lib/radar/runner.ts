@@ -26,6 +26,19 @@ const INTERVAL_MINUTES: Record<string, number> = { immediate: 60, daily: 24 * 60
 const PRIORITY_IMMEDIATE_MINUTES = 20;
 const BUDGET_RESERVE = 20;
 
+const CHANGE_WORDS: Record<string, [string, string]> = {
+  new_filing: ["new filing", "new filings"],
+  new_order: ["new order", "new orders"],
+  new_hearing: ["new hearing", "new hearings"],
+  new_deadline: ["new deadline", "new deadlines"],
+  new_document: ["new document", "new documents"],
+  status_change: ["status change", "status changes"],
+  case_closed: ["case closed", "case closed"],
+  judge_change: ["judge change", "judge changes"],
+  party_change: ["party change", "party changes"],
+  other: ["other change", "other changes"],
+};
+
 export interface WatchRow {
   id: string;
   user_id: string;
@@ -62,6 +75,7 @@ interface Store {
   insertAlerts(rows: Omit<AlertItem, "id" | "readAt" | "createdAt">[], userId: string): Promise<string[]>;
   markEmailed(ids: string[]): Promise<void>;
   updateWatch(id: string, patch: { last_checked_at: string; seen_keys?: string[] }): Promise<void>;
+  getWatch(userId: string, id: string): Promise<WatchRow | null>;
 }
 
 function dbStore(): Store | null {
@@ -103,6 +117,10 @@ function dbStore(): Store | null {
     },
     async updateWatch(id, patch) {
       await db.from("watchlists").update(patch).eq("id", id);
+    },
+    async getWatch(userId, id) {
+      const { data } = await db.from("watchlists").select("*").eq("id", id).eq("user_id", userId).maybeSingle();
+      return (data as WatchRow) ?? null;
     },
   };
 }
@@ -150,6 +168,10 @@ function demoStore(): Store {
         }
       }
     },
+    async getWatch(userId, id) {
+      const w = memoryStore(userId).watchlists.find((x) => x.id === id);
+      return w ? { id: w.id, user_id: userId, kind: w.kind, label: w.label, query: w.query, frequency: w.frequency, channels: w.channels, active: w.active, last_checked_at: w.lastCheckedAt, seen_keys: w.seen } : null;
+    },
   };
 }
 
@@ -176,7 +198,10 @@ export async function checkWatch(
     if (diff.hasChanges && getPlan(plan).features.docketDiff) {
       const summary = Object.entries(diff.counts)
         .filter(([, n]) => n > 0)
-        .map(([k, n]) => `${n} ${k.replace(/_/g, " ")}`)
+        .map(([k, n]) => {
+          const [one, many] = CHANGE_WORDS[k] ?? [k.replace(/_/g, " "), k.replace(/_/g, " ")];
+          return `${n} ${n === 1 ? one : many}`;
+        })
         .join(", ");
       alerts.push({
         watchlistId: watch.id,
@@ -269,4 +294,47 @@ export async function runRadar(now = new Date()): Promise<RunReport> {
   }
   log.info("radar.run", { ...report });
   return report;
+}
+
+/** Manual "Check now" runs per hour, by plan. Priority refresh (Intelligence) gets more. */
+export const MANUAL_CHECKS_PER_HOUR: Record<PlanId, number> = { free: 0, search: 2, research_pro: 6, intelligence: 20 };
+
+export type ManualCheckResult =
+  | { ok: true; alerts: number; baseline: boolean; message: string }
+  | { ok: false; code: "not_found" | "rate_limited" | "budget" | "failed" | "not_configured"; message: string };
+
+/**
+ * Runs one watch immediately for its owner. In-app alerts only (email goes out with the
+ * scheduled digest). Uses the same budget reserve as the scheduler.
+ */
+export async function checkWatchNow(user: { userId: string; plan: PlanId; demo: boolean }, watchId: string, now = new Date()): Promise<ManualCheckResult> {
+  const store = user.demo ? demoStore() : dbStore();
+  if (!store) return { ok: false, code: "not_configured", message: "Case Radar storage is not configured." };
+  const watch = await store.getWatch(user.userId, watchId);
+  if (!watch) return { ok: false, code: "not_found", message: "Watch not found." };
+  if (resolveDataMode() === "live") {
+    const used = await budgetUsed(CL_BUDGET_KEY);
+    if (used >= getEnv().COURTLISTENER_DAILY_REQUEST_BUDGET - BUDGET_RESERVE) {
+      return { ok: false, code: "budget", message: "Today's data-provider request budget is nearly used. Your watch will run on the next scheduled check." };
+    }
+  }
+  const baseline = watch.kind === "docket" ? !(await store.latestSnapshot(watch.id)) : !watch.last_checked_at;
+  try {
+    const alerts = await checkWatch(store, { watch, plan: user.plan }, now);
+    if (watch.kind === "docket") await store.updateWatch(watch.id, { last_checked_at: now.toISOString() });
+    const ids = alerts.length ? await store.insertAlerts(alerts, user.userId) : [];
+    return {
+      ok: true,
+      alerts: ids.length,
+      baseline,
+      message: baseline
+        ? "Baseline recorded. From now on, Case Radar alerts you to anything new."
+        : ids.length
+          ? `${ids.length} new ${ids.length === 1 ? "update" : "updates"} found.`
+          : "Checked just now — nothing new since the last check.",
+    };
+  } catch (e) {
+    log.warn("radar.manual_check_failed", { watchId, error: errorMessage(e) });
+    return { ok: false, code: "failed", message: "The data provider did not respond. Try again shortly." };
+  }
 }

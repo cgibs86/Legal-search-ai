@@ -20,8 +20,13 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const { id } = await ctx.params;
   if (!UUID.test(id)) return apiError(400, "invalid_id", "Invalid project id.");
   const viewer = await getViewer();
-  const gate = requireFeature(viewer, "researchWorkspaces");
-  if (!gate.allowed) return gateError(gate);
+  // Owning projects needs Research Pro; adding to a project you were invited to as an editor
+  // does not (the owner's seats cover it). Membership and role are enforced by RLS.
+  if (!viewer.userId) return apiError(401, "sign_in", "Sign in first.");
+  if (viewer.demo) {
+    const gate = requireFeature(viewer, "researchWorkspaces");
+    if (!gate.allowed) return gateError(gate);
+  }
   const body = await parseBody(req, Item);
   if (!body.ok) return body.response;
   if (JSON.stringify(body.data.ref).length > 60_000) return apiError(413, "too_large", "Saved item is too large.");
@@ -39,6 +44,7 @@ const Patch = z.object({ itemId: z.string().regex(UUID), note: z.string().max(10
 
 export async function PATCH(req: Request, ctx: { params: Promise<{ id: string }> }) {
   const { id } = await ctx.params;
+  if (!UUID.test(id)) return apiError(400, "invalid_id", "Invalid project id.");
   const viewer = await getViewer();
   const body = await parseBody(req, Patch);
   if (!body.ok) return body.response;

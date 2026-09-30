@@ -93,7 +93,9 @@ export function supabaseRepo(db: SupabaseClient, userId: string): WorkspaceRepo 
     },
     async listProjects() {
       const rows = must(await db.from("projects").select("id, name, description, owner_id, created_at, updated_at, project_items(count)").order("updated_at", { ascending: false }));
-      return rows.map((r: Row) => toProject(r as Row, ((r as Row).project_items as { count: number }[] | undefined)?.[0]?.count ?? 0, (r as Row).owner_id === userId ? "owner" : "viewer"));
+      const { data: memberships } = await db.from("project_members").select("project_id, role").eq("user_id", userId);
+      const roleOf = (r: Row): Project["role"] => ((r.owner_id === userId ? "owner" : (memberships ?? []).find((m: Row) => m.project_id === r.id)?.role) ?? "viewer") as Project["role"];
+      return rows.map((r: Row) => toProject(r as Row, ((r as Row).project_items as { count: number }[] | undefined)?.[0]?.count ?? 0, roleOf(r as Row)));
     },
     async createProject(input) {
       const r = must(await db.from("projects").insert({ owner_id: userId, name: input.name, description: input.description ?? null }).select("*").single());
@@ -104,7 +106,9 @@ export function supabaseRepo(db: SupabaseClient, userId: string): WorkspaceRepo 
       const { data: p } = await db.from("projects").select("*").eq("id", id).maybeSingle();
       if (!p) return null;
       const items = must(await db.from("project_items").select("*").eq("project_id", id).order("created_at", { ascending: false }));
-      return { project: toProject(p as Row, items.length, (p as Row).owner_id === userId ? "owner" : "viewer"), items: items.map((i: Row) => toItem(i)) };
+      const { data: m } = await db.from("project_members").select("role").eq("project_id", id).eq("user_id", userId).maybeSingle();
+      const role = ((p as Row).owner_id === userId ? "owner" : (m?.role ?? "viewer")) as Project["role"];
+      return { project: toProject(p as Row, items.length, role), items: items.map((i: Row) => toItem(i)) };
     },
     async deleteProject(id) {
       must(await db.from("projects").delete().eq("id", id).eq("owner_id", userId));

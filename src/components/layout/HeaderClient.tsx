@@ -62,7 +62,7 @@ export function HeaderClient({ viewer, unread, authEnabled, variant }: { viewer:
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 w-full transition-[background,border-color,backdrop-filter] duration-300",
+        "sticky top-0 z-40 w-full print:hidden transition-[background,border-color,backdrop-filter] duration-300",
         scrolled || variant === "default" ? "border-b border-line bg-bg/80 backdrop-blur-xl" : "border-b border-transparent bg-transparent",
       )}
     >
@@ -79,8 +79,9 @@ export function HeaderClient({ viewer, unread, authEnabled, variant }: { viewer:
               {n.label}
             </Link>
           ))}
-          {appNav.map((n) => (
-            <Link key={n.href} href={n.href} className={cn("rounded-lg px-3 py-1.5 text-sm transition", pathname === n.href || (n.href !== "/app" && pathname.startsWith(n.href)) ? "text-fg bg-elev-2" : "text-muted hover:text-fg")}>
+          {/* Desktop shows one Workspace entry; the workspace has its own section nav. */}
+          {appNav.slice(0, 1).map((n) => (
+            <Link key={n.href} href={n.href} className={cn("rounded-lg px-3 py-1.5 text-sm transition", pathname.startsWith("/app") ? "text-fg bg-elev-2" : "text-muted hover:text-fg")}>
               {n.label}
             </Link>
           ))}
