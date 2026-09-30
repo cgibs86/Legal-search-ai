@@ -1,0 +1,2703 @@
+{
+ "meta": {
+  "captured_at": "2026-09-30",
+  "source": "CourtListener REST API v4 (https://www.courtlistener.com/api/rest/v4/)",
+  "notice": "DEMO FIXTURE — a curated snapshot of public court records. Not live data. Individual party names withheld; arrays truncated; whitespace normalized."
+ },
+ "search_r_party_epic": {
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Carmelle F. Alipio",
+     "Christina McCullough",
+     "Jenny J. Wang",
+     "Robert Charles Van Arnam",
+     "Makenzi Galvan",
+     "Daniel A. Kent",
+     "Yumeng Xu",
+     "Li Zhu",
+     "Antoine McNamara",
+     "Jassiem Moore",
+     "Stephen Robert Risley",
+     "Aaron Thomas Fadden",
+     "Thomas Hamilton Segars",
+     "Cyrus Alcorn Morton",
+     "Chelsea A. Pieroni",
+     "Jessica Delacenserie",
+     "Peter D. Siddoway"
+    ],
+    "attorney_id": [],
+    "caseName": "IngenioShare, LLC v. Epic Games, Inc",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the Fourth Circuit",
+    "court_citation_string": "4th Cir.",
+    "court_id": "ca4",
+    "dateArgued": null,
+    "dateFiled": "2026-06-12",
+    "dateTerminated": null,
+    "docketNumber": "26-1757",
+    "docket_absolute_url": "/docket/73480157/ingenioshare-llc-v-epic-games-inc/",
+    "docket_id": 73480157,
+    "firm": [
+     "Direct: 650-784-4040, ROBINS KAPLAN LLP",
+     "Direct: 206-359-8000, PERKINS COIE LLP",
+     "Direct: 919-719-0569, ELLIS & WINTERS, LLP",
+     "Williams Mullen",
+     "Robins Kaplan LLP",
+     "Direct: 404-585-2101, KENT & RISLEY LLC",
+     "Direct: 919-865-7000, ELLIS & WINTERS, LLP",
+     "Direct: 919-981-4038, WILLIAMS MULLEN",
+     "Kent & Risley LLC",
+     "Direct: 919-981-4025, WILLIAMS MULLEN",
+     "Direct: 206-359-6897, PERKINS COIE LLP",
+     "Direct: 602-351-8100, PERKINS COIE LLP",
+     "Perkins Coie LLP",
+     "Direct: 919-981-4055, WILLIAMS MULLEN",
+     "Cyrus Alcorn Morton",
+     "Direct: 984-219-3369, Sage Patent Group"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2026-06-12T20:46:14.496742Z",
+     "date_created": "2026-06-12T20:46:14.336233Z",
+     "score": {
+      "bm25": 0.9785731
+     },
+     "more_docs": false
+    },
+    "pacer_case_id": "183034",
+    "party": [
+     "INGENIOSHARE, LLC",
+     "EPIC GAMES, INC"
+    ],
+    "party_id": [],
+    "recap_documents": [
+     {
+      "absolute_url": "/docket/73480157/2/ingenioshare-llc-v-epic-games-inc/",
+      "attachment_number": null,
+      "cites": [],
+      "description": "",
+      "docket_entry_id": 467442398,
+      "document_number": 2,
+      "document_type": "PACER Document",
+      "entry_date_filed": "2026-06-15",
+      "entry_number": 2,
+      "filepath_local": null,
+      "id": 482706243,
+      "is_available": false,
+      "meta": {
+       "timestamp": "2026-06-15T15:35:16.092920Z",
+       "date_created": "2026-06-15T15:35:15.968093Z"
+      },
+      "pacer_doc_id": "004010747675",
+      "page_count": null,
+      "short_description": "Order filed",
+      "snippet": ""
+     },
+     {
+      "absolute_url": "/docket/73480157/1/ingenioshare-llc-v-epic-games-inc/",
+      "attachment_number": null,
+      "cites": [],
+      "description": "Case docketed. Originating case number: 5:25-cv-00385-M-BM. Case manager: RSewell. [1001996373] [26-1757] RS [Entered: 06/12/2026 03:55 PM]",
+      "docket_entry_id": 467309379,
+      "document_number": 1,
+      "document_type": "PACER Document",
+      "entry_date_filed": "2026-06-12",
+      "entry_number": 1,
+      "filepath_local": null,
+      "id": 482569335,
+      "is_available": false,
+      "meta": {
+       "timestamp": "2026-06-12T20:46:16.074925Z",
+       "date_created": "2026-06-12T20:46:16.002310Z"
+      },
+      "pacer_doc_id": "004010746495",
+      "page_count": null,
+      "short_description": "",
+      "snippet": ""
+     }
+    ],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "3830 Patent",
+    "trustee_str": null
+   }
+  ]
+ },
+ "search_d_attorney_bornstein": {
+  "count": 11,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "assignedTo": "Jon Steven Tigar",
+    "assigned_to_id": 3228,
+    "attorney": [
+     "Susan J. Kohlmann",
+     "Gary Andrew Bornstein",
+     "Navid Cyrus Bayar",
+     "Justin M. Romeo",
+     "Alison I. Stein",
+     "Ishika Desai",
+     "Mark R. Conrad",
+     "Paul T Cappuccio"
+    ],
+    "attorney_id": [],
+    "caseName": "Brave Software, Inc. v. News Corporation",
+    "case_name_full": "",
+    "cause": "17:101 Copyright Infringement",
+    "chapter": null,
+    "court": "District Court, N.D. California",
+    "court_citation_string": "N.D. Cal.",
+    "court_id": "cand",
+    "dateArgued": null,
+    "dateFiled": "2026-05-19",
+    "dateTerminated": null,
+    "docketNumber": "3:26-cv-04758",
+    "docket_absolute_url": "/docket/73365546/brave-software-inc-v-news-corporation/",
+    "docket_id": 73365546,
+    "firm": [
+     "Jenner & Block LLP",
+     "Cravath, Swaine & Moore LLP",
+     "Torridon Law PLLC",
+     "Conrad Metlitzky Kane LLP",
+     "Goodwin Procter LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "Federal Question",
+    "juryDemand": "Both",
+    "meta": {
+     "timestamp": "2026-07-27T20:01:56.232466Z",
+     "date_created": "2026-05-19T22:30:35.702172Z",
+     "score": {
+      "bm25": 13455244000000.0
+     }
+    },
+    "pacer_case_id": "470480",
+    "party": [
+     "Brave Software, Inc.",
+     "News Corporation",
+     "News Pty Limited",
+     "NYP Holdings, Inc.",
+     "News Corp UK & Ireland Limited",
+     "Dow Jones & Co., Inc."
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "820 Copyright",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Rosa M. Morales",
+     "Philip Levitz, Attorney",
+     "Nicole Demers",
+     "Mark S. Popofsky, Attorney",
+     "Graham Miller",
+     "Alexander James Kasner",
+     "Crystal Utley Secoy",
+     "Aaron Chiu",
+     "Michael Kahler",
+     "Jennifer Ellen Greaney",
+     "Conor J. May",
+     "Justin Clifford McCully",
+     "Pablo Tufino-Soto",
+     "Ginger Anders",
+     "Daniel Kane",
+     "Gabe Johnson-Karp",
+     "Carolyn Danielle Jeffries",
+     "Lee Istrail",
+     "Ian Simmons",
+     "David A. Munkittrick",
+     "W. Stephen Westermann",
+     "Cory Leonard Andrews",
+     "Tara W. Pincock, Assistant Attorney General",
+     "Aaron M. Panner, Attorney",
+     "Colin R. Kass"
+    ],
+    "attorney_id": [],
+    "caseName": "USA v. Google LLC",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the D.C. Circuit",
+    "court_citation_string": "D.C. Cir.",
+    "court_id": "cadc",
+    "dateArgued": null,
+    "dateFiled": "2026-02-05",
+    "dateTerminated": null,
+    "docketNumber": "26-5049",
+    "docket_absolute_url": "/docket/72238552/usa-v-google-llc/",
+    "docket_id": 72238552,
+    "firm": [
+     "Direct: 608-267-8904, Wisconsin Department of Justice, Firm: 608-266-9945",
+     "Direct: 609-376-2383, Office of the Attorney General, State of New Jersey, Office of the Solicitor General, Firm: 609-984-4863",
+     "Direct: 720-508-6000, Colorado Department of Law, Office of the Attorney General",
+     "Direct: 202-532-4186, U.S. Department of Justice, (DOJ) Antitrust Division",
+     "Direct: 605-773-3215, Office of the Attorney General, State of South Dakota",
+     "Direct: 615-532-7271, Office of the Attorney General, State of Tennessee",
+     "Direct: 760-668-0934, Thayer, PLLC",
+     "Direct: 212-839-5731, Sidley Austin LLP, Firm: 212-839-5300",
+     "Direct: 407-616-8017, Kellogg, Hansen, Todd, Figel & Frederick, PLLC, Firm: 202-326-7900",
+     "Direct: 202-839-0265, Cooley LLP, Firm: 202-842-7800",
+     "Direct: 206-464-5419, Office of the Attorney General, State of Washington, Firm: 206-464-7744",
+     "Direct: 314-340-7835, Office of the Missouri Attorney General",
+     "Direct: 202-434-5548, Williams & Connolly LLP, Firm: 202-434-5000",
+     "Direct: 785-368-8429, Office of the Kansas Attorney General, Firm: 785-296-3751",
+     "Direct: 212-398-0055, Garwin Gerstein & Fisher LLP",
+     "Direct: 614-466-0755, Office of the Attorney General, State of Ohio, Antitrust Section",
+     "Sidley Austin, Firm: 212-839-5300",
+     "Direct: 202-304-0195, American Antitrust Institute, Firm: 202-276-6002",
+     "Direct: 661-917-4482, Office of the Attorney General, State of Texas",
+     "Direct: 907-269-5275, Office of the Attorney General, State of Alaska",
+     "W. Stephen Westermann",
+     "Direct: 405-522-0858, Office of the Attorney General, State of Oklahoma, Firm: 405-521-4274",
+     "Kellogg, Hansen, Todd, Figel & Frederick, PLLC, Firm: 202-326-7900",
+     "Direct: 720-508-6000, Colorado Department of Law",
+     "Direct: 404-458-3236, Office of the Attorney General, State of Georgia, Firm: 404-656-0397"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2026-04-15T04:45:02.827151Z",
+     "date_created": "2026-02-05T19:44:43.916896Z",
+     "score": {
+      "bm25": 13446345000000.0
+     }
+    },
+    "pacer_case_id": "42855",
+    "party": [
+     "State of Alaska, 20-3715",
+     "Brave Software, Inc.",
+     "State of New Jersey, 20-3715",
+     "State of Colorado, 20-3715",
+     "State of Mississippi",
+     "State of South Carolina",
+     "State of Oregon, 20-3715",
+     "State of Utah, 20-3715",
+     "[Individual party — name withheld in demo fixture]",
+     "State of Wyoming, 20-3715",
+     "[Individual party — name withheld in demo fixture]",
+     "State of Indiana",
+     "[Individual party — name withheld in demo fixture]",
+     "Mozilla Corporation",
+     "[Individual party — name withheld in demo fixture]",
+     "State of Minnesota, 20-3715",
+     "State of Nebraska, 20-3715",
+     "OpenAI OpCo, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "SerpApi, LLC",
+     "State of Arkansas",
+     "Microsoft Corporation",
+     "State of Maryland, 20-3715",
+     "District of Columbia, 20-3715",
+     "State of Montana"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "1410 Antitrust",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Judith Vale",
+     "Helen E. White",
+     "Carolyn Danielle Jeffries",
+     "Michael A. Undorf, Esquire",
+     "Ashwin P. Phatak",
+     "Scott Allen Mertens, Assistant Attorney General",
+     "Radhika Madhavi Kattula",
+     "Mark S. Popofsky, Attorney",
+     "Michelle C. Badorine, Senior Deputy Attorney General",
+     "Tracy Wright Wertz, Esquire",
+     "John K. Olson, Esquire, Deputy Attorney General",
+     "Bryn Anderson Williams",
+     "Daniel Edward Haar, Attorney",
+     "Barbara D. Underwood, Solicitor General",
+     "Abiola G. Miles",
+     "R. Scott Palmer, Esquire",
+     "Sarah A. Hunger, Assistant Attorney General",
+     "Andrew C. Finch",
+     "Asyl Nachabe",
+     "Jonathan B. Sallet, General Counsel",
+     "Dean M. Nickles",
+     "Nicholas M. Vaz, Esquire",
+     "DOJ Appellate Counsel",
+     "Donald B. Verrilli, Jr., Attorney",
+     "Philip Levitz, Attorney"
+    ],
+    "attorney_id": [],
+    "caseName": "USA v. Google LLC",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the D.C. Circuit",
+    "court_citation_string": "D.C. Cir.",
+    "court_id": "cadc",
+    "dateArgued": null,
+    "dateFiled": "2026-02-05",
+    "dateTerminated": null,
+    "docketNumber": "26-5047",
+    "docket_absolute_url": "/docket/72238551/usa-v-google-llc/",
+    "docket_id": 72238551,
+    "firm": [
+     "Direct: 202-532-4186, U.S. Department of Justice, (DOJ) Antitrust Division",
+     "Direct: 701-328-5570, Office of Attorney General, State of North Dakota, Consumer Protection & Antitrust Division, Suite C, Firm: 701-328-5570",
+     "Office of the Attorney General for the District of Columbia, Office of the Solicitor General, Firm: 202-727-3400",
+     "Direct: 202-434-5548, Williams & Connolly LLP, Firm: 202-434-5000",
+     "Direct: 212-416-6274, New York State Office of the Attorney General, Appeals & Opinions Bureau",
+     "Direct: 212-839-5321, Sidley Austin LLP, Firm: 212-839-5300",
+     "Consumer Protection Division, Firm: 601-359-4213, Post",
+     "Direct: 415-510-3511, California Department of Justice, Firm: 415-703-5500",
+     "Direct: 208-332-3549, Idaho Office of the Attorney General",
+     "Office of the Attorney General for the District of Columbia, Firm: 202-727-3400",
+     "Direct: 212-335-2793, Patterson Belknap Webb & Tyler LLP, Firm: 212-336-2000",
+     "Direct: 304-558-8986, Office of the Attorney General, State of West Virginia, Consumer Protection and Antitrust Division",
+     "Direct: 405-522-0858, Office of the Attorney General, State of Oklahoma",
+     "Direct: 402-471-9305, Nebraska Department of Justice",
+     "Direct: 720-508-6000, Colorado Department of Law",
+     "Direct: 404-458-3236, Office of the Attorney General, State of Georgia, Firm: 404-656-0397",
+     "Direct: 406-444-2707, Montana Department of Justice, Firm: 406-444-2026",
+     "Direct: 720-508-6199, Colorado Office of the Attorney General, Consumer Protection Section, Antitrust Unit, Firm: 720-508-6000",
+     "Direct: 415-512-4085, Munger, Tolles & Olson LLP",
+     "Direct: 225-326-6435, Louisiana Department of Justice",
+     "Direct: 609-376-2383, Office of the Attorney General, State of New Jersey, Office of the Solicitor General, Firm: 609-984-4863",
+     "Direct: 307-777-7196, Office of the Attorney General, State of Wyoming",
+     "Direct: 803-734-3996, Office of the Attorney General, State of South Carolina, Firm: 803-734-3680",
+     "Direct: 202-305-4639, U.S. Department of Justice, (DOJ) Antitrust Division",
+     "Direct: 314-340-7835, Office of the Missouri Attorney General"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2026-02-06T03:14:55.792502Z",
+     "date_created": "2026-02-05T19:44:43.783196Z",
+     "score": {
+      "bm25": 13446345000000.0
+     }
+    },
+    "pacer_case_id": "42853",
+    "party": [
+     "State of Florida",
+     "State of Delaware, 20-3715",
+     "Commonwealth of Kentucky",
+     "State of Georgia",
+     "State of New Jersey, 20-3715",
+     "State of Iowa, 20-3715",
+     "State of Tennessee, 20-3715",
+     "State of Maine, 20-3715",
+     "Mozilla Corporation",
+     "State of South Dakota, 20-3715",
+     "State of Wisconsin",
+     "State of Ohio, 20-3715",
+     "State of Washington, 20-3715",
+     "State of Arkansas",
+     "District of Columbia, 20-3715",
+     "State of Minnesota, 20-3715",
+     "State of New Mexico, 20-3715",
+     "State of Oregon, 20-3715",
+     "State of Vermont, 20-3715",
+     "State of Connecticut, 20-3715",
+     "Brave Software, Inc.",
+     "State of Colorado, 20-3715",
+     "State of New York, 20-3715",
+     "State of Nebraska, 20-3715",
+     "State of California"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "1410 Antitrust",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Conor J. May",
+     "Amy Hanson, Assistant Attorney General",
+     "Caroline S. Van Zile, Deputy Solicitor General",
+     "Tyler Timothy Henry",
+     "Jennifer Ellen Greaney",
+     "Alison Esbeck",
+     "Gabe Johnson-Karp",
+     "Christina M. Moylan, Assistant Attorney General",
+     "James Wellner Doggett, Esquire, Deputy Solicitor General",
+     "Colin R. Kass",
+     "Amanda J. Wentz",
+     "Geoffrey J.H. Block",
+     "Justin Clifford McCully",
+     "Joel Thayer, Attorney",
+     "Daniel Edward Haar, Attorney",
+     "Ephraim A. McDowell",
+     "Michelle C. Badorine, Senior Deputy Attorney General",
+     "Gary Bornstein",
+     "R. Scott Palmer, Esquire",
+     "Graham Miller",
+     "Noah Goerlitz",
+     "Nicole Demers",
+     "Cory Leonard Andrews",
+     "Bryn Anderson Williams",
+     "Crystal Utley Secoy"
+    ],
+    "attorney_id": [],
+    "caseName": "USA v. Google LLC",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the D.C. Circuit",
+    "court_citation_string": "D.C. Cir.",
+    "court_id": "cadc",
+    "dateArgued": null,
+    "dateFiled": "2026-01-22",
+    "dateTerminated": null,
+    "docketNumber": "26-5023",
+    "docket_absolute_url": "/docket/72179116/usa-v-google-llc/",
+    "docket_id": 72179116,
+    "firm": [
+     "Direct: 415-512-4066, Munger Tolles & Olson, LLP",
+     "Direct: 212-416-6274, New York State Office of the Attorney General, Appeals & Opinions Bureau",
+     "Direct: 202-434-5548, Williams & Connolly LLP, Firm: 202-434-5000",
+     "Direct: 775-684-1164, Office of the Attorney General, State of Nevada",
+     "Direct: 202-803-0500, U.S. Department of Justice, (DOJ) Antitrust Division, Appellate Section, Firm: 202-514-2413",
+     "Direct: 415-391-0600, Latham & Watkins LLP, Firm: 415-391-0600",
+     "Direct: 212-839-5321, Sidley Austin LLP, Firm: 212-839-5300",
+     "Direct: 307-777-7196, Office of the Attorney General, State of Wyoming",
+     "Direct: 646-960-8601, Shinder Cantor Lerner",
+     "Direct: 919-716-6015, North Carolina Department of Justice",
+     "Direct: 212-416-6325, New York State Office of the Attorney General, Appeals & Opinions Bureau",
+     "Direct: 505-490-4885, Office of the Attorney General, State of New Mexico, Firm: 505-827-6000",
+     "Direct: 404-458-3626, Office of the Attorney General, State of Georgia, Firm: 404-656-0397",
+     "Direct: 614-466-0755, Office of the Attorney General, State of Ohio, Antitrust Section",
+     "Direct: 804-692-0485, Office of the Attorney General of Virginia, Antitrust Unit",
+     "Direct: 202-383-5300, O'Melveny & Myers LLP, Firm: 202-383-5300",
+     "Direct: 212-335-2793, Patterson Belknap Webb & Tyler LLP, Firm: 212-336-2000",
+     "Direct: 202-842-7800, Cooley LLP, Firm: 202-842-7800",
+     "Direct: 407-616-8017, Kellogg, Hansen, Todd, Figel & Frederick, PLLC, Firm: 202-326-7900",
+     "Direct: 212-969-3226, Proskauer Rose LLP, Firm: 212-969-3000",
+     "Direct: 605-773-3215, Office of the Attorney General, State of South Dakota",
+     "Direct: 787-725-6655, Puerto Rico Department of Justice, Calle Teniente Cesar Gonzalez 677, Esq. Ave. Jesus T. Pinero, San Juan, Puerto Rico",
+     "Direct: 802-828-5586, Office of the Attorney General, State of Vermont, Firm: 802-828-3171",
+     "Direct: 661-917-4482, Office of the Attorney General",
+     "Direct: 615-770-1714, Office of Tennessee Attorney General"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2026-01-23T01:02:30.626826Z",
+     "date_created": "2026-01-23T01:02:30.507819Z",
+     "score": {
+      "bm25": 13445136000000.0
+     }
+    },
+    "pacer_case_id": "42811",
+    "party": [
+     "State of Maryland, 20-3715",
+     "State of New Hampshire, 20-3715",
+     "American Antitrust Institute",
+     "Washington Legal Foundation",
+     "[Individual party — name withheld in demo fixture]",
+     "State of Idaho, 20-3715",
+     "State of Hawaii, 20-3715",
+     "State of Iowa, 20-3715",
+     "State of Missouri",
+     "State of West Virginia, 20-3715",
+     "State of Nevada, 20-3715",
+     "Commonwealth of Kentucky",
+     "Little Tech Association",
+     "[Individual party — name withheld in demo fixture]",
+     "State of Texas",
+     "Duck Duck Go, Inc.",
+     "Commonwealth of Puerto Rico, 20-3715",
+     "State of Georgia",
+     "State of Tennessee, 20-3715",
+     "Economists and Legal & Technology Scholars",
+     "State of New Jersey, 20-3715",
+     "Commonwealth of Pennsylvania, 20-3715",
+     "[Individual party — name withheld in demo fixture]",
+     "State of North Carolina, 20-3715",
+     "State of Indiana"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "1410 Antitrust",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Mr. Scott A. Keller, Attorney",
+     "Justin Clarke",
+     "Cynthia Richman",
+     "Catherine S. Simonsen",
+     "Mr. Tyler P. Young, AT",
+     "Mr. Calvin House, Attorney",
+     "Adam Gershenson, Attorney",
+     "Karl Huth",
+     "Mr. Mark Andrew Perry, Counsel",
+     "Mark Geoffrey Weiss",
+     "Jonathan Michael Redgrave, Attorney",
+     "Lawrence Steven Ebner",
+     "Justin H. Sanders, Attorney",
+     "Mr. Roman Martinez, Attorney",
+     "Gregory G. Garre",
+     "Mr. Zac Morgan",
+     "Paul Jeffrey Riehle",
+     "Margaret C. MacLean",
+     "Gary Bornstein",
+     "Michael J. Zaken",
+     "Noel Hudson",
+     "Jennifer Daskal",
+     "Kevin Russell",
+     "R. Trent McCotter",
+     "Aaron Martin Panner, Attorney"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Apple Inc.",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": "2025-10-21",
+    "dateFiled": "2025-05-07",
+    "dateTerminated": null,
+    "docketNumber": "25-2935",
+    "docket_absolute_url": "/docket/70190916/epic-games-inc-v-apple-inc/",
+    "docket_id": 70190916,
+    "firm": [
+     "Direct: 202-305-7848, DOJ U.S. Department of Justice",
+     "Direct: 323-854-6543, Bradley Bernstein Sands LLP",
+     "Direct: 202-274-0235, Phoenix Center for Advanced Legal & Economic Public Policy Studies",
+     "Direct: 617-772-8310, Weil, Gotshal & Manges, LLP",
+     "Direct: 202-955-8234, Gibson, Dunn & Crutcher, LLP",
+     "Direct: 385-270-2164, Utah Attorney General's Office",
+     "Direct: 202-682-7000, Weil, Gotshal & Manges",
+     "Direct: 212-731-9333, Huth Reynolds, LLP",
+     "Direct: 917-747-5196, Simonsen Sussman LLP",
+     "Direct: 415-510-3487, AGCA Office of the California Attorney General, Office of the Solicitor General",
+     "Direct: 202-240-8433, Russell & Woofter, LLC",
+     "Kellogg, Hansen, Todd, Figel & Frederick, P.L.L.C.",
+     "Direct: 914-997-0500, Lowey Dannenberg, PC",
+     "Direct: 213-988-6678, ArentFox Schiff, LLP",
+     "Direct: 202-729-6337, Atlantic Legal Foundation",
+     "Direct: 919-821-6725, Smith Anderson",
+     "Gary Bornstein",
+     "Direct: 612-416-3336, McCurdy Laud, LLC",
+     "Direct: 202-365-3758, Venable, LLP",
+     "Direct: 626-449-2300, Gutierrez, Preciado & House, LLP",
+     "Direct: 212-474-1000, Cravath, Swaine & Moore, LLP, 2 Manhattan West",
+     "Direct: 617-937-2379, Cooley LLP",
+     "Direct: 713-632-8000, Yetter Coleman",
+     "Direct: 202-682-7511, Weil, Gotshal & Manges, LLP",
+     "Direct: 650-461-5650, Sullivan & Cromwell, LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2026-03-28T00:27:40.320526Z",
+     "date_created": "2025-05-07T17:12:48.863386Z",
+     "score": {
+      "bm25": 13422672000000.0
+     }
+    },
+    "pacer_case_id": "1d02a68e-bb7c-4021-af16-ed352facf157",
+    "party": [
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "STATE OF ALASKA",
+     "INTERNATIONAL CENTER FOR LAW & ECONOMICS",
+     "STATE OF INDIANA",
+     "[Individual party — name withheld in demo fixture]",
+     "ACT THE APP ASSOCIATION",
+     "STATE OF LOUISIANA",
+     "[Individual party — name withheld in demo fixture]",
+     "STATE OF NORTH CAROLINA",
+     "SPOTIFY USA INC.",
+     "STATE OF MINNESOTA",
+     "[Individual party — name withheld in demo fixture]",
+     "STATE OF UTAH",
+     "STATE OF OREGON",
+     "[Individual party — name withheld in demo fixture]",
+     "CIVIL JUSTICE ASSOCIATION OF CALIFORNIA",
+     "STATE OF WEST VIRGINIA",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "NETCHOICE, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Justin Clarke",
+     "Mr. Sourabh Mishra, AT",
+     "Christine Varney",
+     "Lauren Moskowitz",
+     "Mr. Dane Paul Shikman, Attorney",
+     "Ms. Jessica Lynn Ellsworth, Attorney",
+     "Yonatan Even, Attorney",
+     "Mr. Reedy Swanson, Attorney",
+     "Mr. Justin Paul Raphael",
+     "Omid Nasab",
+     "M. Brent Byars",
+     "John Charles Hueston, Attorney",
+     "Ms. Johannah Cassel-Walker",
+     "Michelle Park Chiu",
+     "Brian Christopher Rocca, Attorney",
+     "Paul Jeffrey Riehle",
+     "Joseph Reiter, Attorney",
+     "Neal Kumar Katyal",
+     "Gary Bornstein",
+     "Mr. Glenn D. Pomerantz, Attorney",
+     "Mr. Daniel Woofter",
+     "Kevin Russell",
+     "Mr. Kuruvilla Olasa",
+     "Wes Earnhardt, Attorney",
+     "Sujal Shah, Attorney"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Google LLC, et al.",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": null,
+    "dateFiled": "2025-01-16",
+    "dateTerminated": null,
+    "docketNumber": "25-303",
+    "docket_absolute_url": "/docket/69555293/epic-games-inc-v-google-llc-et-al/",
+    "docket_id": 69555293,
+    "firm": [
+     "Direct: 213-788-4536, Hueston Hennigan, LLP",
+     "Direct: 949-229-8640, Hueston Hennigan, LLP",
+     "Hogan Lovells US LLP",
+     "Direct: 212-474-1000, Cravath, Swaine & Moore, LLP",
+     "Direct: 479-719-2930, Hogan Lovells, LLP",
+     "Direct: 202-637-5886, Hogan Lovells US, LLP",
+     "Direct: 213-683-9530, Munger, Tolles & Olson, LLP",
+     "Direct: 213-683-9100, Munger, Tolles & Olson, LLP",
+     "Direct: 415-512-4085, Munger, Tolles & Olson LLP",
+     "Direct: 415-512-4000, Munger Tolles & Olson, LLP",
+     "Direct: 949-200-6750, Hueston Hennigan, LLP",
+     "Direct: 202-240-8433, Russell & Woofter, LLC",
+     "Direct: 415-442-1000, Morgan Lewis & Bockius, LLP",
+     "Direct: 415-442-1386, Morgan Lewis & Bockius LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2025-03-03T03:04:35.475659Z",
+     "date_created": "2025-01-17T16:35:39.867687Z",
+     "score": {
+      "bm25": 13413081000000.0
+     }
+    },
+    "pacer_case_id": "d9ab4cf5-4e85-45c4-81b9-390658d58569",
+    "party": [
+     "GOOGLE COMMERCE, LTD.",
+     "EPIC GAMES, INC., a Maryland Corporation",
+     "GOOGLE ASIA PACIFIC PTE, LTD.",
+     "GOOGLE LLC",
+     "GOOGLE IRELAND, LTD.",
+     "GOOGLE PAYMENT CORP."
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": "Ricardo S. Martinez",
+    "assigned_to_id": 2067,
+    "attorney": [
+     "Derek W Loeser",
+     "Gary M Klinger",
+     "Ian J Engdahl",
+     "Cynthia J Heidelberg",
+     "Simon S Grille",
+     "Alexandra M Honeycutt",
+     "Caroline Power",
+     "Thomas E Loeser",
+     "Jason T Dennett",
+     "Amanda V Boltax",
+     "Norman E Siegel",
+     "Sophia M Rios",
+     "Joan Maya Pradhan",
+     "Adele Daniel",
+     "Cari Campen Laufenberg",
+     "Barrett J. Vahle",
+     "Greg Chuebon",
+     "Fred B Burnside",
+     "Joy Merklen",
+     "James J Pizzirusso",
+     "Adam E Polk",
+     "Andrew Lindsay",
+     "Kylie Fisher",
+     "Karin Bornstein Swope",
+     "E Michelle Drake"
+    ],
+    "attorney_id": [],
+    "caseName": "In re Microsoft Browser Extension Litigation",
+    "case_name_full": "",
+    "cause": "28:1332 Diversity",
+    "chapter": null,
+    "court": "District Court, W.D. Washington",
+    "court_citation_string": "W.D. Wash.",
+    "court_id": "wawd",
+    "dateArgued": null,
+    "dateFiled": "2025-01-14",
+    "dateTerminated": null,
+    "docketNumber": "2:25-cv-00088",
+    "docket_absolute_url": "/docket/69545256/in-re-microsoft-browser-extension-litigation/",
+    "docket_id": 69545256,
+    "firm": [
+     "Breskin Johnson & Townsend Pllc",
+     "Kirkland and Ellis LLP (IL)",
+     "Stueve Siegel Hanson LLP",
+     "Milberg Attorneys at Law",
+     "Davis Wright Tremaine (Sea)",
+     "Dechert LLP (Ny)",
+     "Milberg Coleman Bryson Phillips Grossman Pllc (Il)",
+     "Tousley, Brain Stephens PLLC",
+     "Girard Sharp LLP",
+     "Cotchett Pitre & McCarthy LLP (Seattle)",
+     "Hausfeld (Ny)",
+     "Dechert LLP",
+     "Keller Rohrback LLP (Wa)",
+     "Hausfeld, LLP (DC)"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "Diversity",
+    "juryDemand": "Plaintiff",
+    "meta": {
+     "timestamp": "2025-06-26T04:14:51.701829Z",
+     "date_created": "2025-01-15T01:25:58.330385Z",
+     "score": {
+      "bm25": 13412909000000.0
+     }
+    },
+    "pacer_case_id": "343505",
+    "party": [
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "Boycat Inc",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "Storm Productions LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "Microsoft Corporation",
+     "Just Josh Inc",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "380 Personal Property: Other",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": "Beth Labson Freeman",
+    "assigned_to_id": 1114,
+    "attorney": [
+     "Steven M. Nathan",
+     "Benjamin Widlanski",
+     "Bryan Frederick Aylstock",
+     "Christopher A. Seeger",
+     "Brian O. O'Mara",
+     "Joshua P. Davis",
+     "Elizabeth Joan Cabraser",
+     "Savannah Taylor Green",
+     "Connor J. Carroll",
+     "Trevor Taige Tan",
+     "Marc R Shapiro",
+     "Jennifer M. Keighley",
+     "James Arthur Ulwick",
+     "Alex Kashurba",
+     "Ashley Crooks",
+     "Sean Adam Petterson",
+     "Norman E. Siegel",
+     "Stephen A. Weiss",
+     "Nina Gliozzo",
+     "Michael K. Sheen",
+     "Heather Lopez",
+     "Adam Marc Apton",
+     "Mark S. Reich",
+     "Danna Z. Elmasry",
+     "John J. Nelson"
+    ],
+    "attorney_id": [],
+    "caseName": "In re PayPal Honey Browser Extension Litigation",
+    "case_name_full": "",
+    "cause": "28:1332 Diversity-Fraud",
+    "chapter": null,
+    "court": "District Court, N.D. California",
+    "court_citation_string": "N.D. Cal.",
+    "court_id": "cand",
+    "dateArgued": null,
+    "dateFiled": "2024-12-29",
+    "dateTerminated": null,
+    "docketNumber": "5:24-cv-09470",
+    "docket_absolute_url": "/docket/69503243/in-re-paypal-honey-browser-extension-litigation/",
+    "docket_id": 69503243,
+    "firm": [
+     "Berger Montague PC",
+     "Orrick Herrington and Sutcliffe LLP",
+     "HammondLaw P.C.",
+     "Eksm, LLP",
+     "Orrick, Herrington & Sutcliffe LLP",
+     "Thomas Eric Loeser",
+     "Gibbs Law Group LLP",
+     "Baron & Budd, P.C.",
+     "Eksm LLP",
+     "Cohen Milstein Sellers & Toll Pllc",
+     "Stueve Siegel Hanson LLP",
+     "Lieff Cabraser Heimann & Bernstein LLP",
+     "Kristensen Law Group, Kristensen Law Group",
+     "Girard Sharp LLP",
+     "Hausfeld",
+     "Lieff Cabraser Heimann and Bernstein LLP",
+     "Cotchett, Pitre & McCarthy",
+     "Kopelowitz Ostrow P.A.",
+     "Aylstock, Witki, Kreis and Overhotlz",
+     "Kozyak Tropin Throckmorton LLP",
+     "Hausfeld LLP",
+     "Lieff Cabraser Heimann & Bernstein, LLP",
+     "Keller Rohrback L.L.P.",
+     "Migliaccio and Rathod LLP",
+     "Schall Brown & Schwartz LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "Diversity",
+    "juryDemand": "Plaintiff",
+    "meta": {
+     "timestamp": "2026-01-21T19:51:23.027990Z",
+     "date_created": "2024-12-30T05:35:13.674778Z",
+     "score": {
+      "bm25": 13411526000000.0
+     }
+    },
+    "pacer_case_id": "441974",
+    "party": [
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "GamersNexus, LLC",
+     "Brodie That Dood, Inc.",
+     "Miniac, LLC",
+     "Gents Scents LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "Stuber Holdings, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "The Charismatic Voice, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "Gear Live Media, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "PayPal Holdings, Inc.",
+     "Just Josh Inc.",
+     "[Individual party — name withheld in demo fixture]"
+    ],
+    "party_id": [],
+    "referredTo": "Susan G. Van Keulen",
+    "referred_to_id": 9096,
+    "suitNature": "370 Other Fraud",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Justin Clarke",
+     "Mr. Sourabh Mishra, AT",
+     "Steven A. Hirsch, Attorney",
+     "Christine Varney",
+     "Mr. Judd E. Stone, II",
+     "Lauren Moskowitz",
+     "Aaron Martin Panner, Attorney",
+     "Mr. Dane Paul Shikman, Attorney",
+     "Anthony P. Schoenberg",
+     "David Craig Kiernan",
+     "Mr. Robert Thomas Smith",
+     "Mr. Patrick Michael Kuhlmann",
+     "Mr. Jonathan Alan Patchen, Attorney",
+     "Ms. Jessica Lynn Ellsworth, Attorney",
+     "Mr. Scott A. Keller, Attorney",
+     "Yonatan Even, Attorney",
+     "Mr. Cory Leonard Andrews",
+     "Mr. Reedy Swanson, Attorney",
+     "Mr. Justin Paul Raphael",
+     "Omid Nasab",
+     "M. Brent Byars",
+     "John Charles Hueston, Attorney",
+     "David W. Kesselman",
+     "Mr. Alexander Burgess Aronson, Attorney",
+     "Ms. Johannah Cassel-Walker"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Google LLC, et al.",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": null,
+    "dateFiled": "2024-10-16",
+    "dateTerminated": null,
+    "docketNumber": "24-6274",
+    "docket_absolute_url": "/docket/69269988/epic-games-inc-v-google-llc-et-al/",
+    "docket_id": 69269988,
+    "firm": [
+     "Hogan Lovells US LLP",
+     "Direct: 479-719-2930, Hogan Lovells, LLP",
+     "Kellogg, Hansen, Todd, Figel & Frederick, P.L.L.C.",
+     "Direct: 202-588-0302, Washington Legal Foundation",
+     "Direct: (415) 626-3939, Jones Day",
+     "Direct: 202-626-2915, King & Spalding",
+     "Direct: 517-507-1446, ACT the App Association",
+     "Direct: 310-307-4556, Kesselman Brantly Stockinger LLP",
+     "Keker Van Nest & Peters LLP",
+     "Direct: 415-512-4085, Munger, Tolles & Olson LLP",
+     "Direct: 202-307-2206, DOJ U.S. Department of Justice, Antitrust Division, Appellate Section",
+     "Direct: 415-442-1386, Morgan Lewis & Bockius LLP",
+     "Direct: 949-229-8640, Hueston Hennigan, LLP",
+     "Direct: 212-474-1000, Cravath, Swaine & Moore, LLP",
+     "Direct: 202-637-5886, Hogan Lovells US, LLP",
+     "Direct: 213-683-9530, Munger, Tolles & Olson, LLP",
+     "Direct: 213-683-9100, Munger, Tolles & Olson, LLP",
+     "Direct: 978-371-3200, Court Accountability",
+     "Direct: 202-775-4500, Kramer Levin Naftalis & Frankel, LLP",
+     "Direct: 415-512-4000, Munger Tolles & Olson, LLP",
+     "Direct: 415-954-4400, Farella Braun & Martel, LLP",
+     "Direct: 415-858-7594, Willkie Farr & Gallagher, LLP",
+     "Direct: 415-800-0591, Lewis & Llewellyn LLP",
+     "Direct: 512-693-8350, Lehotsky Keller Cohn LLP",
+     "Direct: 213-788-4536, Hueston Hennigan, LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2025-03-03T00:43:13.139330Z",
+     "date_created": "2024-10-17T00:31:29.631448Z",
+     "score": {
+      "bm25": 13405133000000.0
+     }
+    },
+    "pacer_case_id": "69a6df9a-7196-4d19-9177-a019a215d489",
+    "party": [
+     "GOOGLE COMMERCE, LTD.",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "UNITED STATES OF AMERICA",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "BETTERTIME, CO.",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "CENTER FOR CYBERSECURITY POLICY AND LAW",
+     "[Individual party — name withheld in demo fixture]",
+     "COMPUTER & COMMUNICATIONS INDUSTRY ASSOCIATION",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "APTOIDE S.A.",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "COMPETITIVE ENTERPRISE INSTITUTE",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": null,
+    "assigned_to_id": null,
+    "attorney": [
+     "Michelle Park Chiu",
+     "Yonatan Even, Attorney",
+     "Mr. John Reeves, Attorney",
+     "Mr. Sourabh Mishra, AT",
+     "Mr. Benjamin W. Berkowitz, Attorney",
+     "Mr. Kuruvilla Olasa",
+     "Wes Earnhardt, Attorney",
+     "Mr. Calvin House, Attorney",
+     "Kathleen R. Hartnett, Attorney",
+     "Lee Hepner",
+     "Neal Kumar Katyal",
+     "Gary Bornstein",
+     "Lauren Moskowitz",
+     "David Craig Kiernan",
+     "Paul Jeffrey Riehle",
+     "Allison Wiseman Acker",
+     "Brian Scarpelli",
+     "Anthony P. Schoenberg",
+     "Mr. Robert Thomas Smith",
+     "John Charles Hueston, Attorney",
+     "Mr. Matthew David Field, Attorney",
+     "Mr. Dane Paul Shikman, Attorney",
+     "Omid Nasab",
+     "M. Brent Byars",
+     "Amy R. Upshaw"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Google LLC, et al.",
+    "case_name_full": "",
+    "cause": "",
+    "chapter": null,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": "2025-02-03",
+    "dateFiled": "2024-10-15",
+    "dateTerminated": null,
+    "docketNumber": "24-6256",
+    "docket_absolute_url": "/docket/69269093/epic-games-inc-v-google-llc-et-al/",
+    "docket_id": 69269093,
+    "firm": [
+     "Direct: 517-507-1446, ACT the App Association",
+     "Direct: 202-240-8433, Russell & Woofter, LLC",
+     "Direct: 415-512-4000, Munger Tolles & Olson, LLP",
+     "Direct: 202-626-2915, King & Spalding",
+     "Direct: 202-598-2874, DOJ U.S. Department of Justice, Antitrust Division, Appellate Section",
+     "Terminated: 08/14/2025, Direct: 415-649-6700, Complex Appellate Litigation Group, LLP",
+     "Direct: 415-800-0591, Lewis & Llewellyn LLP",
+     "Direct: 978-371-3200, Court Accountability",
+     "Direct: 415-649-6700, Complex Appellate Litigation Group, LLP",
+     "Direct: 314-804-7923, Reeves Law, LLC",
+     "Direct: 415-436-9333, Electronic Frontier Foundation",
+     "Direct: 737-465-7248, Stone Hilton PLLC",
+     "Direct: 202-307-2206, DOJ U.S. Department of Justice, Antitrust Division, Appellate Section",
+     "Direct: 626-449-2300, Gutierrez, Preciado & House, LLP",
+     "Gary Bornstein",
+     "Direct: 202-835-7505, Milbank",
+     "Direct: 615-742-7895, Bass, Berry & Sims, PLC",
+     "Direct: 202-344-8281, Venable, LLP",
+     "Direct: 212-474-1000, Cravath, Swaine & Moore, LLP",
+     "Direct: 213-683-9100, Munger, Tolles & Olson, LLP",
+     "Direct: 415-954-4400, Farella Braun & Martel, LLP",
+     "Direct: 512-693-8350, Lehotsky Keller Cohn LLP",
+     "Direct: 310-576-2148, Bryan Cave Leighton Paisner, LLP",
+     "Direct: 314-804-2586, Reeves Law, LLC",
+     "Direct: 310-307-4556, Kesselman Brantly Stockinger LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "",
+    "juryDemand": "",
+    "meta": {
+     "timestamp": "2025-03-03T00:42:43.491815Z",
+     "date_created": "2024-10-16T21:22:35.264820Z",
+     "score": {
+      "bm25": 13405046000000.0
+     }
+    },
+    "pacer_case_id": "e2d27689-fc63-4b46-aa8e-dcf086bf9b65",
+    "party": [
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "MICROSOFT CORPORATION",
+     "COMMITTEE FOR JUSTICE",
+     "BETTERTIME, CO.",
+     "VISUAL BLASTERS, LLC",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "UNITED STATES OF AMERICA",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "GOOGLE PAYMENT CORP.",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "[Individual party — name withheld in demo fixture]",
+     "FIRECRACKER SOFTWARE LLC",
+     "INTERNATIONAL CENTER FOR LAW & ECONOMICS",
+     "[Individual party — name withheld in demo fixture]"
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "",
+    "trustee_str": null
+   },
+   {
+    "assignedTo": "James Donato",
+    "assigned_to_id": 892,
+    "attorney": [
+     "Yonatan Even",
+     "Michael Jacob Zaken",
+     "Martha L. Goodman",
+     "Karen Leah Dunn",
+     "Lily Anna North",
+     "Jeannie S. Rhee",
+     "Shaneeda Jaffer",
+     "Debra Dawn Bernstein",
+     "Adam Bryan Wolfson",
+     "Gary Andrew Bornstein",
+     "Jessica E Phillips",
+     "Victoria F. Maroulis",
+     "Lauren Ann Moskowitz",
+     "Kevin Yoshiwo Teruya",
+     "Meredith Richardson Dearborn"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Samsung Electronics Co. Ltd.",
+    "case_name_full": "",
+    "cause": "15:1 Antitrust Litigation",
+    "chapter": null,
+    "court": "District Court, N.D. California",
+    "court_citation_string": "N.D. Cal.",
+    "court_id": "cand",
+    "dateArgued": null,
+    "dateFiled": "2024-09-30",
+    "dateTerminated": null,
+    "docketNumber": "3:24-cv-06843",
+    "docket_absolute_url": "/docket/69207079/epic-games-inc-v-samsung-electronics-co-ltd/",
+    "docket_id": 69207079,
+    "firm": [
+     "Paul, Weiss, Rifkind, Wharton & Garrison LLP",
+     "Dunn Isaacson Rhee LLP, DC",
+     "Cravath, Swaine & Moore LLP",
+     "Alston & Bird LLP",
+     "Paul Weiss Rifkind Wharton Garrison LLP",
+     "Benesch Friedlander Coplan & Aronoff LLP",
+     "Dunn Isaacson Rhee LLP",
+     "Quinn Emanuel Urquhart and Sullivan LLP",
+     "Quinn Emanuel Urquhart Sullivan LLP",
+     "Quinn Emanuel Urquhart and Sullivan, LLP",
+     "Paul Weiss Rifkind Wharton & Garrison LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "Federal Question",
+    "juryDemand": "Plaintiff",
+    "meta": {
+     "timestamp": "2025-07-05T10:49:48.650411Z",
+     "date_created": "2024-09-30T10:42:31.848872Z",
+     "score": {
+      "bm25": 13403750000000.0
+     }
+    },
+    "pacer_case_id": "437289",
+    "party": [
+     "Google LLC",
+     "Samsung Electronics Co. Ltd.",
+     "Samsung Electronic America, Inc.",
+     "Epic Games, Inc."
+    ],
+    "party_id": [],
+    "referredTo": null,
+    "referred_to_id": null,
+    "suitNature": "410 Anti-Trust",
+    "trustee_str": null
+   }
+  ]
+ },
+ "search_d_docket_epic_v_apple": {
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "assignedTo": "Yvonne Gonzalez Rogers",
+    "assigned_to_id": 2766,
+    "attorney": [
+     "Gary Andrew Bornstein",
+     "Yonatan Even",
+     "Christine A Varney",
+     "Katherine B. Forrest",
+     "Mark A. Perry",
+     "Theodore J. Boutrous , Jr.",
+     "Richard Joseph Doren",
+     "Daniel Glen Swanson",
+     "Cynthia Richman",
+     "Jason C Lo",
+     "Rachele R. Byrd",
+     "Steve W. Berman",
+     "Katie Townsend",
+     "Karen Leah Dunn",
+     "William A. Isaacson",
+     "Paul Jeffrey Riehle",
+     "Michael Brent Byars",
+     "Lauren Ann Moskowitz",
+     "E. Joshua Rosenkranz",
+     "Joel Kurtzberg"
+    ],
+    "attorney_id": [],
+    "caseName": "Epic Games, Inc. v. Apple Inc.",
+    "case_name_full": "",
+    "cause": "15:1 Antitrust Litigation",
+    "chapter": null,
+    "court": "District Court, N.D. California",
+    "court_citation_string": "N.D. Cal.",
+    "court_id": "cand",
+    "dateArgued": null,
+    "dateFiled": "2020-08-13",
+    "dateTerminated": "2021-09-10",
+    "docketNumber": "4:20-cv-05640",
+    "docket_absolute_url": "/docket/17442392/epic-games-inc-v-apple-inc/",
+    "docket_id": 17442392,
+    "firm": [
+     "Cravath, Swaine & Moore LLP",
+     "Gibson, Dunn & Crutcher LLP",
+     "Weil, Gotshal & Manges LLP",
+     "Paul, Weiss, Rifkind, Wharton & Garrison LLP",
+     "Davis Polk & Wardwell LLP",
+     "Hagens Berman Sobol Shapiro LLP",
+     "Reporters Committee for Freedom of the Press",
+     "Munger, Tolles & Olson LLP",
+     "Latham & Watkins LLP",
+     "Wilson Sonsini Goodrich & Rosati",
+     "Sullivan & Cromwell LLP"
+    ],
+    "firm_id": [],
+    "jurisdictionType": "Federal Question",
+    "juryDemand": "Defendant",
+    "meta": {
+     "timestamp": "2025-04-15T15:06:30.798241Z",
+     "date_created": "2020-08-13T19:32:25.544687Z",
+     "score": {
+      "bm25": 0.0
+     }
+    },
+    "pacer_case_id": "364265",
+    "party": [
+     "Epic Games, Inc.",
+     "Apple Inc.",
+     "Microsoft Corporation",
+     "Spotify USA Inc.",
+     "Match Group, LLC",
+     "Meta Platforms, Inc.",
+     "Nintendo of America Inc.",
+     "Samsung Electronics Co., Ltd",
+     "Google LLC",
+     "Netflix, Inc.",
+     "Amazon.com Services LLC",
+     "Valve Corporation",
+     "Lyft, Inc.",
+     "PayPal, Inc.",
+     "Visa Inc.",
+     "Digital Content Next",
+     "Korean Publishers Association",
+     "Coronavirus Reporter Corporation",
+     "Greenflight Venture Corporation",
+     "X Corp., Inc."
+    ],
+    "party_id": [],
+    "referredTo": "Thomas S. Hixson",
+    "referred_to_id": 9089,
+    "suitNature": "410 Anti-Trust",
+    "trustee_str": null
+   }
+  ]
+ },
+ "search_o_caption_epic": {
+  "count": 8,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "absolute_url": "/opinion/10753351/epic-games-inc-v-apple-inc/",
+    "attorney": "",
+    "caseName": "Epic Games, Inc. v. Apple Inc.",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10753351,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": "2025-10-21",
+    "dateFiled": "2025-12-11",
+    "docketNumber": "25-2935",
+    "docket_id": 70190916,
+    "judge": "",
+    "meta": {
+     "timestamp": "2026-03-28T00:27:40.328905Z",
+     "date_created": "2025-12-11T17:01:09.679427Z",
+     "score": {
+      "bm25": 0.7816779
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/12/11/25-2935.pdf",
+      "id": 11219936,
+      "local_path": "pdf/2025/12/11/epic_games_inc._v._apple_inc..pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION\n\n UNITED STATES COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nEPIC GAMES, INC., No. 25-2935\n D.C. No.\n Plaintiff-ctr-defendant -\n 4:20-cv-05640-\n Appellee,\n YGR\n v.\n\nAPPLE INC.,\n OPINION",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/10670849/epic-games-inc-v-google-llc/",
+    "attorney": "",
+    "caseName": "Epic Games, Inc. v. Google LLC",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10670849,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": null,
+    "dateFiled": "2025-09-12",
+    "docketNumber": "25-303",
+    "docket_id": 69555293,
+    "judge": "",
+    "meta": {
+     "timestamp": "2025-09-12T21:00:49.155801Z",
+     "date_created": "2025-09-12T21:00:49.071077Z",
+     "score": {
+      "bm25": 0.97016346
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/09/12/25-303.pdf",
+      "id": 11137436,
+      "local_path": "pdf/2025/09/12/epic_games_inc._v._google_llc.pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION FILED\n UNITED STATES COURT OF APPEALS SEP 12 2025\n MOLLY C. DWYER, CLERK\n U.S. COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nIn re: Google Play Store Antitrust Litigation No. 24-6256",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/10645446/epic-games-inc-v-google-llc/",
+    "attorney": "",
+    "caseName": "Epic Games, Inc. v. Google LLC",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10645446,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": null,
+    "dateFiled": "2025-07-31",
+    "docketNumber": "25-303",
+    "docket_id": 69555293,
+    "judge": "",
+    "meta": {
+     "timestamp": "2025-07-31T17:00:50.036508Z",
+     "date_created": "2025-07-31T17:00:49.949522Z",
+     "score": {
+      "bm25": 0.96686995
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/07/31/25-303.pdf",
+      "id": 11112033,
+      "local_path": "pdf/2025/07/31/epic_games_inc._v._google_llc.pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION\n\n UNITED STATES COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nIn re: Google Play Store Antitrust No. 24-6256\nLitigation\n D.C. Nos.\n 3:21-md-02981-JD\n 3:20-cv-05671-JD\nEPIC GAMES, INC., a Maryland\nCorporation,\n OPINION\n Plaintiff - Appellee,\n\n v.\n\nGOOGLE LLC; GOOGL",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/9413885/epic-games-inc-v-apple-inc/",
+    "attorney": "",
+    "caseName": "Epic Games, Inc. v. Apple, Inc.",
+    "caseNameFull": "",
+    "citation": [
+     "73 F.4th 785"
+    ],
+    "citeCount": 0,
+    "cluster_id": 9413885,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": "2022-11-14",
+    "dateFiled": "2023-07-17",
+    "docketNumber": "21-16506",
+    "docket_id": 65753722,
+    "judge": "",
+    "meta": {
+     "timestamp": "2025-11-17T21:54:08.855236Z",
+     "date_created": "2023-07-17T21:00:48.937248Z",
+     "score": {
+      "bm25": 0.9117469
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2023/07/17/21-16506.pdf",
+      "id": 9409361,
+      "local_path": "pdf/2023/07/17/epic_games_inc._v._apple_inc..pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION FILED\n UNITED STATES COURT OF APPEALS JUL 17 2023\n MOLLY C. DWYER, CLERK\n U.S. COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nEPIC GAMES, INC., No. 21-16506\n\n Plaintiff-counter-",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/9395291/epic-games-inc-v-apple-inc/",
+    "attorney": "",
+    "caseName": "Epic Games, Inc. v. Apple, Inc.",
+    "caseNameFull": "",
+    "citation": [
+     "67 F.4th 946"
+    ],
+    "citeCount": 65,
+    "cluster_id": 9395291,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": "2022-11-14",
+    "dateFiled": "2023-04-24",
+    "docketNumber": "21-16506",
+    "docket_id": 65753722,
+    "judge": "",
+    "meta": {
+     "timestamp": "2025-11-17T21:53:19.785741Z",
+     "date_created": "2023-04-28T16:00:43.490527Z",
+     "score": {
+      "bm25": 0.9057559
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2023/04/24/21-16506.pdf",
+      "id": 9390767,
+      "local_path": "pdf/2023/04/24/epic_games_inc._v._apple_inc._2.pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION\n\n UNITED STATES COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nEPIC GAMES, INC., No. 21-16506\n Plaintiff-counter-\n defendant-Appellant, D.C. No.\n 4:20-cv-05640-\n v. YGR\n\nAPPLE, INC.,\n Defendant-counter- OPINION\n claimant- Appellee.",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/8721938/silicon-knights-inc-v-epic-games-inc/",
+    "attorney": "Betsy Cook Lanzen, Hayden J. Silver, III, Marina Chase Carreker, Womble Carlyle Sandridge & Rice, PLLC, Raleigh, NC, for Plaintiff., Douglas W. Kenyon, R. Dennis Fairbanks, Sean Michael Braswell, Hunton & Williams, LLP, Raleigh, NC, Canon Pence, Epic Games, Inc., Cary, NC, for Defendant.",
+    "caseName": "Silicon Knights, Inc. v. Epic Games, Inc.",
+    "caseNameFull": "SILICON KNIGHTS, INC. v. EPIC GAMES, INC.",
+    "citation": [
+     "917 F. Supp. 2d 503",
+     "2012 WL 6809721",
+     "2012 U.S. Dist. LEXIS 160529"
+    ],
+    "citeCount": 19,
+    "cluster_id": 8721938,
+    "court": "District Court, E.D. North Carolina",
+    "court_citation_string": "E.D.N.C.",
+    "court_id": "nced",
+    "dateArgued": null,
+    "dateFiled": "2012-11-07",
+    "docketNumber": "No. 5:07-CV-275-D",
+    "docket_id": 65987860,
+    "judge": "III",
+    "meta": {
+     "timestamp": "2024-06-22T21:09:14.901310Z",
+     "date_created": "2022-11-26T06:14:55.354247Z",
+     "score": {
+      "bm25": 0.6753055
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": null,
+      "id": 8705131,
+      "local_path": null,
+      "per_curiam": false,
+      "snippet": "ORDER\nJAMES C. DEVER III, Chief Judge.\nOn May 30, 2012, after an eleven-day trial and one day of deliberations, a jury returned a verdict against Silicon Knights, Inc. (“Silicon Knights” or “plaintiff’) [D.E. 802], The jury found that Silicon Knights failed to prove its breach of contract claim, and that Epic Games, Inc. (“Epic Games” or “defendant”) had proven its breach of contract, copyright infringeme",
+      "type": "lead-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   }
+  ]
+ },
+ "search_o_mention_epic": {
+  "count": 69,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "absolute_url": "/opinion/10947324/surgical-instrument-service-company-inc-v-intuitive-surgical-inc/",
+    "attorney": "",
+    "caseName": "Surgical Instrument Service Company, Inc. v. Intuitive Surgical, Inc.",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10947324,
+    "court": "Court of Appeals for the Ninth Circuit",
+    "court_citation_string": "9th Cir.",
+    "court_id": "ca9",
+    "dateArgued": null,
+    "dateFiled": "2026-08-13",
+    "docketNumber": "25-1372",
+    "docket_id": 69813800,
+    "judge": "",
+    "meta": {
+     "timestamp": "2026-08-13T18:00:52.320461Z",
+     "date_created": "2026-08-13T18:00:52.147198Z",
+     "score": {
+      "bm25": null
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/13/25-1372.pdf",
+      "id": 11414910,
+      "local_path": "pdf/2026/08/13/surgical_instrument_service_company_inc._v._intuitive_surgical_inc..pdf",
+      "per_curiam": false,
+      "snippet": "FOR PUBLICATION\n\n UNITED STATES COURT OF APPEALS\n FOR THE NINTH CIRCUIT\n\nSURGICAL INSTRUMENT No. 25-1372\nSERVICE COMPANY, INC.,\n D.C. No.\n 3:21-cv-03496-\n Plaintiff-ctr-defendant -\n AMO\n Appellant,\n\n v.\n OPINION\nINTUITIVE SURGICAL, INC.,",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/10934771/phantomalert-inc-v-apple-inc/",
+    "attorney": "",
+    "caseName": "PhantomALERT Inc. v. Apple Inc.",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10934771,
+    "court": "Court of Appeals for the D.C. Circuit",
+    "court_citation_string": "D.C. Cir.",
+    "court_id": "cadc",
+    "dateArgued": null,
+    "dateFiled": "2026-07-24",
+    "docketNumber": "25-7017",
+    "docket_id": 69625347,
+    "judge": "",
+    "meta": {
+     "timestamp": "2026-07-24T16:01:05.976508Z",
+     "date_created": "2026-07-24T16:00:56.008394Z",
+     "score": {
+      "bm25": null
+     }
+    },
+    "opinions": [
+     {
+      "author_id": null,
+      "download_url": "https://media.cadc.uscourts.gov/opinions/docs/2026/07/25-7017-2184926.pdf",
+      "id": 11402339,
+      "local_path": "pdf/2026/07/24/phantomalert_inc._v._apple_inc..pdf",
+      "per_curiam": false,
+      "snippet": "United States Court of Appeals\n FOR THE DISTRICT OF COLUMBIA CIRCUIT\n\nArgued December 11, 2025 Decided July 24, 2026\n\n No. 25-7017\n\n PHANTOMALERT INC.,\n APPELLANT\n\n v.\n\n APPLE INC.,\n APPELLEE\n\n Appeal from the United States District Court\n for the District of Columbia\n (No. 1:24-cv-00786)",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   },
+   {
+    "absolute_url": "/opinion/10881681/trump-v-slaughter/",
+    "attorney": "",
+    "caseName": "Trump v. Slaughter",
+    "caseNameFull": "",
+    "citation": [],
+    "citeCount": 0,
+    "cluster_id": 10881681,
+    "court": "Supreme Court of the United States",
+    "court_citation_string": "SCOTUS",
+    "court_id": "scotus",
+    "dateArgued": null,
+    "dateFiled": "2026-06-29",
+    "docketNumber": "25-332",
+    "docket_id": 72005945,
+    "judge": "John G. Roberts",
+    "meta": {
+     "timestamp": "2026-06-29T15:01:05.680552Z",
+     "date_created": "2026-06-29T15:01:05.533352Z",
+     "score": {
+      "bm25": null
+     }
+    },
+    "opinions": [
+     {
+      "author_id": 2738,
+      "download_url": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf",
+      "id": 11349203,
+      "local_path": "pdf/2026/06/29/trump_v._slaughter.pdf",
+      "per_curiam": false,
+      "snippet": "(Slip Opinion) OCTOBER TERM, 2025 1\n\n Syllabus\n\n NOTE: Where it is feasible, a syllabus (headnote) will be released, as is\n being done in connection with this case, at the time the opinion is issued.",
+      "type": "combined-opinion"
+     }
+    ],
+    "posture": "",
+    "procedural_history": "",
+    "status": "Published",
+    "suitNature": "",
+    "syllabus": ""
+   }
+  ]
+ },
+ "search_rd_mention_epic": {
+  "count": 8172,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "absolute_url": "/docket/71469626/23/in-re-gateway-video-game-addiction-products-liability-litigation/",
+    "attachment_number": null,
+    "description": "SEE CORRECTED PLEADING (re: pldg. ( 27 in MDL No. 3168) CORPORATE DISCLOSURE STATEMENT re: pldg. ( 1 in MDL No. 3168), ( 2 in MDL No. 3168) -- Identifying Corporate Parent No Parent Corp., Non-Party/Financial Interest Tencent Holdings Limited for EPIC GAMES INC, EPIC GAMES, INC., EPIC GAMES, INC., EPIC GAMES, INC., EPIC GAMES, INC., EPIC GAMES, INC., EPIC GAMES, INC., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc., Epic Games, Inc.. (Attachments: # 1 Schedule of Actions, # 2 Proof of Service) Associated Cases: MDL No. 3168, CAE/2:25-cv-02727, CAN/3:25-cv-03088, CAN/3:25-cv-06245, CAN/3:25-cv-06877, CAN/3:25-cv-07964, CAN/3:25-cv-08122, CO/1:25-cv-02967, ME/1:25-cv-00467, PAE/2:25-cv-04301, PAE/2:25-cv-05306, PAE/2:25-cv-05436, PAE/2:25-cv-05471, PAE/5:25-cv-05249, PAE/5:25-cv-05477, PAM/3:25-cv-01789 (Kaba, Moez) Modified on 10/16/2025 (LH). ADDED NOTATION (Entered: 10/09/2025)",
+    "docket_entry_id": 472709033,
+    "docket_id": 71469626,
+    "document_number": 23,
+    "document_type": "PACER Document",
+    "entry_date_filed": "2025-10-09",
+    "entry_number": 23,
+    "filepath_local": null,
+    "id": 488151602,
+    "is_available": false,
+    "meta": {
+     "timestamp": "2026-07-30T19:51:40.318026Z",
+     "date_created": "2026-07-30T19:51:40.239768Z",
+     "score": {
+      "bm25": 120.00433
+     }
+    },
+    "pacer_doc_id": "85001516082",
+    "page_count": null,
+    "short_description": "",
+    "snippet": ""
+   },
+   {
+    "absolute_url": "",
+    "attachment_number": null,
+    "description": "Set Answer Deadline for Epic Games Inc.: Epic Games Inc. waived service on October 21, 2025: Answer due by 12/22/2025. (mjlt)",
+    "docket_entry_id": 441847717,
+    "docket_id": 71365085,
+    "document_number": null,
+    "document_type": "PACER Document",
+    "entry_date_filed": "2025-10-23",
+    "entry_number": null,
+    "filepath_local": null,
+    "id": 456440099,
+    "is_available": false,
+    "meta": {
+     "timestamp": "2026-03-25T17:39:55.701279Z",
+     "date_created": "2025-10-23T17:13:50.607226Z",
+     "score": {
+      "bm25": 109.67862
+     }
+    },
+    "pacer_doc_id": "",
+    "page_count": null,
+    "short_description": "",
+    "snippet": ""
+   }
+  ]
+ },
+ "docket_17442392": {
+  "id": 17442392,
+  "court_id": "cand",
+  "idb_data": null,
+  "clusters": [
+   "https://www.courtlistener.com/api/rest/v4/clusters/9599257/",
+   "https://www.courtlistener.com/api/rest/v4/clusters/9599673/",
+   "https://www.courtlistener.com/api/rest/v4/clusters/9598282/"
+  ],
+  "absolute_url": "/docket/17442392/epic-games-inc-v-apple-inc/",
+  "date_created": "2020-08-13T12:32:25.544687-07:00",
+  "date_modified": "2026-09-29T07:58:56.894927-07:00",
+  "source": 1,
+  "appeal_from_str": "",
+  "assigned_to_str": "Yvonne Gonzalez Rogers",
+  "referred_to_str": "Thomas S. Hixson",
+  "date_filed": "2020-08-13",
+  "date_terminated": "2021-09-10",
+  "date_last_filing": "2026-09-25",
+  "case_name_short": "",
+  "case_name": "Epic Games, Inc. v. Apple Inc.",
+  "case_name_full": "",
+  "docket_number": "4:20-cv-05640",
+  "docket_number_core": "2005640",
+  "pacer_case_id": "364265",
+  "cause": "15:1 Antitrust Litigation",
+  "nature_of_suit": "410 Anti-Trust",
+  "jury_demand": "Defendant",
+  "jurisdiction_type": "Federal Question",
+  "mdl_status": "",
+  "blocked": false
+ },
+ "parties_17442392": {
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "id": 15909207,
+    "name": "Greenflight Venture Corporation",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 10575340,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     },
+     {
+      "attorney_id": 10575340,
+      "docket_id": 17442392,
+      "role": 1,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Plaintiff",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 15909208,
+    "name": "Coronavirus Reporter Corporation",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 10575340,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Movant",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 15565579,
+    "name": "Korean Publishers Association",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 10148381,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Movant",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 15457395,
+    "name": "Pure Sweat Basketball, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 10575341,
+      "docket_id": 17442392,
+      "role": 1,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Movant",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 15123117,
+    "name": "Staco Link Co., Ltd.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 10148381,
+      "docket_id": 17442392,
+      "role": 1,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 13682485,
+    "name": "X Corp., Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 9074018,
+      "docket_id": 17442392,
+      "role": 4,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 13491208,
+    "name": "Digital Content Next",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 6990363,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Amicus",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 13469043,
+    "name": "Meta Platforms, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7009243,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 13469042,
+    "name": "Match Group, LLC",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 6963387,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10732232,
+    "name": "The Gearbox Entertainment",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7036829,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Interested Party",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10732231,
+    "name": "Visa Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 9507316,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Interested Party",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10701636,
+    "name": "Netflix, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7019401,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     },
+     {
+      "attorney_id": 7015604,
+      "docket_id": 17442392,
+      "role": 6,
+      "date_action": "2024-02-29"
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10697841,
+    "name": "Amazon.com Services LLC",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7012954,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Movant",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10692601,
+    "name": "Nintendo of America Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 6963384,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Intervenor",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10692600,
+    "name": "Spotify USA Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7009242,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     },
+     {
+      "attorney_id": 7009242,
+      "docket_id": 17442392,
+      "role": 6,
+      "date_action": "2022-03-18"
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10692599,
+    "name": "Kabam, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7009240,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Interested Party",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10692598,
+    "name": "PayPal, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7009239,
+      "docket_id": 17442392,
+      "role": 1,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Interested Party",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10692597,
+    "name": "Lyft, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7009238,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Defendant",
+      "date_terminated": null,
+      "extra_info": ""
+     },
+     {
+      "docket_id": 17442392,
+      "name": "Interested Party",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   },
+   {
+    "id": 10691430,
+    "name": "Roblox, Inc.",
+    "extra_info": "",
+    "attorneys": [
+     {
+      "attorney_id": 7008248,
+      "docket_id": 17442392,
+      "role": 2,
+      "date_action": null
+     }
+    ],
+    "party_types": [
+     {
+      "docket_id": 17442392,
+      "name": "Miscellaneous",
+      "date_terminated": null,
+      "extra_info": ""
+     }
+    ]
+   }
+  ]
+ },
+ "docket_entries_17442392": {
+  "count": 12,
+  "next": null,
+  "previous": null,
+  "results": [
+   {
+    "id": 479509392,
+    "recap_documents": [
+     {
+      "id": 495162519,
+      "absolute_url": "/docket/17442392/1719/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-09-25T18:35:22.811586-07:00",
+      "date_modified": "2026-09-25T18:46:45.691299-07:00",
+      "date_upload": "2026-09-25T18:46:45.687177-07:00",
+      "description": "Status Report",
+      "document_number": "1719",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1719.0.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027706412",
+      "page_count": 8,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1719 Filed 09/25/26 Page 1 of 8 1 Matthew J. Adler (SBN 273147) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 FAEGRE DRINKER BIDDLE & REATH LLP David B. Toscano (pro hac vice) Four Embarcadero Center 3 San Francisco, California 94111 [email removed] Telephone: (415) 591-7500 DAVIS POLK & WARDWELL LLP 4 Facsimile: (415) 591-7510 450 Lexington Avenue New York, New York 10017 5 Gary A. Bornstein (pro hac vice) Tel: (212) 450-4000 [email removed] Fax: (212) 701-5800 6 Yonatan Even (pro hac vice) [email removed] 7 Lauren A. Moskowitz (pro hac vice) Micah G. Block [email removed] [email removed] 8 Michael J. Zaken (pro hac vice) 900 Middlefield Road, Suite 200 [email removed] Redwood City, California 94063 9 M. Brent Byars (pro hac vice) Tel: (650) 752-2000 [email removed] Fax: 752-2111 10 CRAVATH, SWAINE & MOORE LLP 375 Ninth Avenue 11 New"
+     }
+    ],
+    "date_modified": "2026-09-25T20:12:14.943401-07:00",
+    "date_filed": "2026-09-25",
+    "entry_number": 1719,
+    "description": "STATUS REPORT Regarding Apple's Document Production by Epic Games, Inc.. (Bornstein, Gary) (Filed on 9/25/2026) (Entered: 09/25/2026)"
+   },
+   {
+    "id": 479511374,
+    "recap_documents": [
+     {
+      "id": 495164586,
+      "absolute_url": "/docket/17442392/1718/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-09-25T20:12:14.925675-07:00",
+      "date_modified": "2026-09-25T20:12:14.925690-07:00",
+      "date_upload": null,
+      "description": "",
+      "document_number": "1718",
+      "document_type": 1,
+      "filepath_local": null,
+      "is_available": false,
+      "is_sealed": null,
+      "ocr_status": null,
+      "pacer_doc_id": "",
+      "page_count": null,
+      "plain_text": ""
+     }
+    ],
+    "date_modified": "2026-09-25T20:12:14.904796-07:00",
+    "date_filed": "2026-09-14",
+    "entry_number": 1718,
+    "description": "NOTICE of Withdrawal filed by Camilla Brandfield-Harvey, no longer appearing on behalf of Apple Inc. in this case (Brandfield-Harvey, Camilla) (Filed on 9/14/2026) (Entered: 09/14/2026)"
+   },
+   {
+    "id": 477900945,
+    "recap_documents": [
+     {
+      "id": 493511606,
+      "absolute_url": "",
+      "attachment_number": null,
+      "date_created": "2026-09-14T12:32:06.320913-07:00",
+      "date_modified": "2026-09-14T12:32:06.320921-07:00",
+      "date_upload": null,
+      "description": "Notice of Appearance/Substitution/Change/Withdrawal of Attorney",
+      "document_number": "",
+      "document_type": 1,
+      "filepath_local": null,
+      "is_available": false,
+      "is_sealed": null,
+      "ocr_status": null,
+      "pacer_doc_id": "",
+      "page_count": null,
+      "plain_text": ""
+     }
+    ],
+    "date_modified": "2026-09-14T12:32:06.310493-07:00",
+    "date_filed": "2026-09-14",
+    "entry_number": null,
+    "description": ""
+   },
+   {
+    "id": 477569676,
+    "recap_documents": [
+     {
+      "id": 493168007,
+      "absolute_url": "/docket/17442392/1717/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-09-10T13:34:43.288928-07:00",
+      "date_modified": "2026-09-28T10:53:32.911506-07:00",
+      "date_upload": "2026-09-10T13:41:42.357479-07:00",
+      "description": "Status Report",
+      "document_number": "1717",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1717.0.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027629483",
+      "page_count": 5,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1717 Filed 09/10/26 Page 1 of 5 1 Matthew J. Adler (SBN 273147) Sarah M. Ray (SBN 229670) [email removed] [email removed] 2 FAEGRE DRINKER BIDDLE & REATH LLP Aaron T. Chiu (SBN 287788) Four Embarcadero Center 3 San Francisco, California 94111 [email removed] Telephone: (415) 591-7500 Blake R. Davis (SBN 294360) 4 Facsimile: (415) 591-7510 [email removed] Brett M. Sandford (SBN 302072) 5 Gary A. Bornstein (pro hac vice) [email removed] [email removed] LATHAM & WATKINS LLP 6 Yonatan Even (pro hac vice) 505 Montgomery Street, Suite 2000 [email removed] 7 Lauren A. Moskowitz (pro hac vice) San Francisco, California 94111-6538 [email removed] Telephone: +1.415.391.0600 8 Michael J. Zaken (pro hac vice) [email removed] Gary S. Feinerman (pro hac vice) 9 M. Brent Byars (pro hac vice) [email removed] [email removed] LATHAM & WATKINS LLP 10 CRAVATH, SWAINE & MOORE "
+     }
+    ],
+    "date_modified": "2026-09-25T20:12:14.850578-07:00",
+    "date_filed": "2026-09-10",
+    "entry_number": 1717,
+    "description": "STATUS REPORT Regarding Apple's Document Production by Epic Games, Inc.. (Bornstein, Gary) (Filed on 9/10/2026) (Entered: 09/10/2026)"
+   },
+   {
+    "id": 475428244,
+    "recap_documents": [
+     {
+      "id": 490959049,
+      "absolute_url": "/docket/17442392/1716/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-21T16:02:30.503828-07:00",
+      "date_modified": "2026-09-09T16:50:34.230873-07:00",
+      "date_upload": "2026-08-21T16:48:37.448018-07:00",
+      "description": "Opposition/Response to Motion",
+      "document_number": "1716",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1716.0.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027544290",
+      "page_count": 7,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1716 Filed 08/21/26 Page 1 of 7 GARY A. BORNSTEIN (pro hac vice) 1 [email removed] 2 YONATAN EVEN (pro hac vice) [email removed] 3 LAUREN A. MOSKOWITZ (pro hac vice) [email removed] 4 MICHAEL J. ZAKEN (pro hac vice) [email removed] 5 M. BRENT BYARS (pro hac vice) 6 [email removed] CRAVATH, SWAINE & MOORE LLP 7 375 Ninth Avenue New York, New York 10001 8 Telephone: (212) 474-1000 Facsimile: (212) 474-3700 9 10 MATTHEW J. ADLER (SBN 273147) [email removed] 11 FAEGRE DRINKER BIDDLE & REATH LLP Four Embarcadero Center 12 San Francisco, California 94111 Telephone: (415) 591-7500 13 Facsimile: (415) 591-7510 14 Attorneys for Plaintiff and Counter-defendant 15 Epic Games, Inc. 16 UNITED STATES DISTRICT COURT 17 NORTHERN DISTRICT OF CALIFORNIA OAKLAND DIVISION 18 19 EPIC GAMES, INC., Case No. 4:20-CV-05640-YGR-TSH 20 Plaintiff, Counter-defendant, EPIC GAMES, INC.’"
+     },
+     {
+      "id": 490963242,
+      "absolute_url": "/docket/17442392/1716/1/epic-games-inc-v-apple-inc/",
+      "attachment_number": 1,
+      "date_created": "2026-08-21T16:48:31.392476-07:00",
+      "date_modified": "2026-09-08T23:25:58.838910-07:00",
+      "date_upload": "2026-08-24T04:20:52.375567-07:00",
+      "description": "Exhibit A",
+      "document_number": "1716",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1716.1.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 1,
+      "pacer_doc_id": "035027544291",
+      "page_count": 19,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1716-1 Filed 08/21/26 Page 1 of 19 EXHIBIT A Case 4:20-cv-05640-YGR Document 1716-1 Filed 08/21/26 Page 2 of 19 Portions Sought Apple’s Basis for Sealing (Dkt. 1709-1) Epic’s Position to be Sealed Apple Inc.’s Remand Proffer (Dkt. 1708) Page 11, Reflects analysis derived from Epic objects. Line 8 confidential Apple IAP revenue data Apple proposes to redact link-out adoption rates, based on app between May 2024 – April 2025, size, which are core to the remand proceedings. regarding the revenue ranking of apps offering link-outs. Page 11, Reflects analysis derived from Epic objects except as to line 18. Lines 14, 17, 18, confidential Apple App Store revenue The decline in IAP billings allegedly due to link-outs is core 20, 21, 22 data showing the financial impact of the to the remand proceedings, and the percentage decline does Court’s April 2025 Order. not "
+     }
+    ],
+    "date_modified": "2026-08-24T11:51:08.755697-07:00",
+    "date_filed": "2026-08-21",
+    "entry_number": 1716,
+    "description": "OPPOSITION/RESPONSE (re 1709 Administrative Motion to File Under Seal Portions of Its Remand Proffer and Supporting Expert Reports ) filed byEpic Games, Inc.. (Attachments: # 1 Exhibit A)(Even, Yonatan) (Filed on 8/21/2026) (Entered: 08/21/2026)"
+   },
+   {
+    "id": 474856610,
+    "recap_documents": [
+     {
+      "id": 490370077,
+      "absolute_url": "/docket/17442392/1715/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-18T08:36:03.507320-07:00",
+      "date_modified": "2026-08-21T21:26:34.266685-07:00",
+      "date_upload": "2026-08-18T08:40:50.233511-07:00",
+      "description": "Order on Stipulation",
+      "document_number": "1715",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1715.0.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027522843",
+      "page_count": 9,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1715 Filed 08/17/26 Page 1 of 9 MATTHEW J. ADLER (SBN 273147) Sarah M. Ray (SBN 229670) 1 [email removed] [email removed] FAEGRE DRINKER BIDDLE & REATH LLP Aaron T. Chiu (SBN 287788) 2 Four Embarcadero Center San Francisco, California 94111 [email removed] 3 Telephone: (415) 591-7500 Blake R. Davis (SBN 294360) Facsimile: (415) 591-7510 [email removed] 4 Brett M. Sandford (SBN 302072) GARY A. BORNSTEIN (pro hac vice) [email removed] 5 [email removed] LATHAM & WATKINS LLP YONATAN EVEN (pro hac vice) 505 Montgomery Street, Suite 2000 6 [email removed] LAUREN A. MOSKOWITZ (pro hac vice) San Francisco, California 94111-6538 7 [email removed] Telephone: +1.415.391.0600 MICHAEL J. ZAKEN (pro hac vice) 8 [email removed] Gary S. Feinerman (pro hac vice) M. BRENT BYARS (pro hac vice) [email removed] 9 [email removed] LATHAM & WATKINS LLP CRAVATH, SWAINE & MOORE LLP"
+     }
+    ],
+    "date_modified": "2026-08-24T11:51:08.736814-07:00",
+    "date_filed": "2026-08-17",
+    "entry_number": 1715,
+    "description": "Order by Judge Yvonne Gonzalez Rogers Granting 1714 Stipulation Regarding Epic's Response to Apple's Administrative Motion to Seal. Epic's Response due by 8/21/2026. (eac, COURT STAFF) (Filed on 8/17/2026) (Entered: 08/18/2026)"
+   },
+   {
+    "id": 474801609,
+    "recap_documents": [
+     {
+      "id": 490313053,
+      "absolute_url": "/docket/17442392/1714/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-17T16:04:45.220047-07:00",
+      "date_modified": "2026-09-29T01:23:19.042987-07:00",
+      "date_upload": "2026-08-28T11:35:11.516545-07:00",
+      "description": "Stipulation and Proposed Order",
+      "document_number": "1714",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1714.0.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027520216",
+      "page_count": 6,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1714 Filed 08/17/26 Page 1 of 6 MATTHEW J. ADLER (SBN 273147) Sarah M. Ray (SBN 229670) 1 [email removed] [email removed] FAEGRE DRINKER BIDDLE & REATH LLP Aaron T. Chiu (SBN 287788) 2 Four Embarcadero Center San Francisco, California 94111 [email removed] 3 Telephone: (415) 591-7500 Blake R. Davis (SBN 294360) Facsimile: (415) 591-7510 [email removed] 4 Brett M. Sandford (SBN 302072) GARY A. BORNSTEIN (pro hac vice) [email removed] 5 [email removed] LATHAM & WATKINS LLP YONATAN EVEN (pro hac vice) 505 Montgomery Street, Suite 2000 6 [email removed] LAUREN A. MOSKOWITZ (pro hac vice) San Francisco, California 94111-6538 7 [email removed] Telephone: +1.415.391.0600 MICHAEL J. ZAKEN (pro hac vice) 8 [email removed] Gary S. Feinerman (pro hac vice) M. BRENT BYARS (pro hac vice) [email removed] 9 [email removed] LATHAM & WATKINS LLP CRAVATH, SWAINE & MOORE LLP"
+     },
+     {
+      "id": 490313672,
+      "absolute_url": "/docket/17442392/1714/1/epic-games-inc-v-apple-inc/",
+      "attachment_number": 1,
+      "date_created": "2026-08-17T16:10:24.417404-07:00",
+      "date_modified": "2026-09-10T15:52:17.941928-07:00",
+      "date_upload": "2026-08-28T11:35:32.449593-07:00",
+      "description": "Declaration of Yonatan Even in Support of Joint Stipulation and Proposed Order R",
+      "document_number": "1714",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1714.1.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027520217",
+      "page_count": 3,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1714-1 Filed 08/17/26 Page 1 of 3 GARY A. BORNSTEIN (pro hac vice) 1 [email removed] 2 YONATAN EVEN (pro hac vice) [email removed] 3 LAUREN A. MOSKOWITZ (pro hac vice) [email removed] 4 MICHAEL J. ZAKEN (pro hac vice) [email removed] 5 BRENT BYARS (pro hac vice) 6 [email removed] CRAVATH, SWAINE & MOORE LLP 7 375 Ninth Avenue New York, New York 10001 8 Telephone: (212) 474-1000 Facsimile: (212) 474-3700 9 10 Matthew J. Adler (SBN 273147) [email removed] 11 FAEGRE DRINKER BIDDLE & REATH LLP Four Embarcadero Center 12 San Francisco, California 94111 Telephone: (415) 591-7500 13 Facsimile: (415) 591-7510 14 Counsel for Plaintiff Epic Games, Inc. 15 16 UNITED STATES DISTRICT COURT 17 NORTHERN DISTRICT OF CALIFORNIA 18 OAKLAND DIVISION 19 EPIC GAMES, INC. Case No. 4:20-cv-05640-YGR-TSH 20 Plaintiff, DECLARATION OF YONATAN EVEN IN 21 SUPPORT OF JOINT STIPULATION"
+     }
+    ],
+    "date_modified": "2026-08-24T11:51:08.717816-07:00",
+    "date_filed": "2026-08-17",
+    "entry_number": 1714,
+    "description": "STIPULATION WITH PROPOSED ORDER re 1709 Administrative Motion to File Under Seal Portions of Its Remand Proffer and Supporting Expert Reports re: Extension of Time to Respond filed by Epic Games, Inc.. (Attachments: # 1 Declaration of Yonatan Even in Support of Joint Stipulation and Proposed Order Regarding Epic Games, Inc.'s Response to Apple Inc.'s Administrative Motion to Seal)(Even, Yonatan) (Filed on 8/17/2026) (Entered: 08/17/2026)"
+   },
+   {
+    "id": 474722538,
+    "recap_documents": [
+     {
+      "id": 490232423,
+      "absolute_url": "/docket/17442392/1713/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-17T09:37:34.652286-07:00",
+      "date_modified": "2026-09-29T07:58:56.786688-07:00",
+      "date_upload": "2026-09-29T07:58:56.782700-07:00",
+      "description": "Opposition/Response to Motion",
+      "document_number": "1713",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1713.0_1.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027516962",
+      "page_count": 3,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1713 Filed 08/17/26 Page 1 of 3 GARY A. BORNSTEIN (pro hac vice) 1 [email removed] YONATAN EVEN (pro hac vice) 2 [email removed] LAUREN A. MOSKOWITZ (pro hac vice) 3 [email removed] MICHAEL J. ZAKEN (pro hac vice) 4 [email removed] M. BRENT BYARS (pro hac vice) 5 [email removed] CRAVATH, SWAINE & MOORE LLP 6 375 Ninth Avenue New York, New York 10001 7 Telephone: (212) 474-1000 Facsimile: (212) 474-3700 8 MATTHEW J. ADLER (SBN 273147) 9 [email removed] FAEGRE DRINKER BIDDLE & REATH LLP 10 Four Embarcadero Center San Francisco, California 94111 11 Telephone: (415) 591-7500 Facsimile: (415) 591-7510 12 Attorneys for Plaintiff and Counter-defendant 13 Epic Games, Inc. 14 UNITED STATES DISTRICT COURT 15 NORTHERN DISTRICT OF CALIFORNIA 16 OAKLAND DIVISION 17 EPIC GAMES, INC., Case No. 4:20-CV-05640-YGR-TSH 18 Plaintiff, Counter-defendant, EPIC GAMES, INC.’S RESP"
+     }
+    ],
+    "date_modified": "2026-08-24T11:51:08.691100-07:00",
+    "date_filed": "2026-08-17",
+    "entry_number": 1713,
+    "description": "OPPOSITION/RESPONSE (re 1710 ADMINISTRATIVE MOTION for Referral to Settlement Conference ) filed byEpic Games, Inc.. (Bornstein, Gary) (Filed on 8/17/2026) (Entered: 08/17/2026)"
+   },
+   {
+    "id": 474630100,
+    "recap_documents": [
+     {
+      "id": 490138166,
+      "absolute_url": "/docket/17442392/1712/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-16T13:00:48.953816-07:00",
+      "date_modified": "2026-08-17T14:05:19.842103-07:00",
+      "date_upload": null,
+      "description": "Transcript",
+      "document_number": "1712",
+      "document_type": 1,
+      "filepath_local": null,
+      "is_available": false,
+      "is_sealed": true,
+      "ocr_status": null,
+      "pacer_doc_id": "035027516209",
+      "page_count": null,
+      "plain_text": ""
+     }
+    ],
+    "date_modified": "2026-08-16T18:11:43.703242-07:00",
+    "date_filed": "2026-08-16",
+    "entry_number": 1712,
+    "description": "Transcript of Proceedings held on 8/11/2026, before Judge Yvonne Gonzalez Rogers. Court Reporter/Transcriber Kelly Shainline, telephone number (510)828-9404, Email: kelly_shainline@cand.uscourts.gov. Per General Order No. 59 and Judicial Conference policy, this transcript may be viewed only at the Clerk's Office public terminal or may be purchased through the Court Reporter/Transcriber until the deadline for the Release of Transcript Restriction. After that date it may be obtained through PACER. Any Notice of Intent to Request Redaction, if required, is due no later than 5 business days from date of this filing. (Re 1703 Transcript Order, 1704 Transcript Order ) Release of Transcript Restriction set for 11/16/2026. (Related documents(s) 1703, 1704 ) (Shainline, Kelly) (Filed on 8/16/2026) (Entered: 08/16/2026)"
+   },
+   {
+    "id": 474396232,
+    "recap_documents": [
+     {
+      "id": 489895870,
+      "absolute_url": "/docket/17442392/1709/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-13T14:35:10.346053-07:00",
+      "date_modified": "2026-08-24T12:50:26.559055-07:00",
+      "date_upload": "2026-08-13T16:28:32.127750-07:00",
+      "description": "Administrative Motion to File Under Seal",
+      "document_number": "1709",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1709.0.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 1,
+      "pacer_doc_id": "035027507490",
+      "page_count": 8,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1709 Filed 08/13/26 Page 1 of 8 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700 1"
+     },
+     {
+      "id": 489909129,
+      "absolute_url": "/docket/17442392/1709/1/epic-games-inc-v-apple-inc/",
+      "attachment_number": 1,
+      "date_created": "2026-08-13T16:28:00.964554-07:00",
+      "date_modified": "2026-08-22T17:51:41.749197-07:00",
+      "date_upload": "2026-08-13T16:28:33.902251-07:00",
+      "description": "Declaration of Sarah M. Ray",
+      "document_number": "1709",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1709.1.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 1,
+      "pacer_doc_id": "035027507491",
+      "page_count": 9,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1709-1 Filed 08/13/26 Page 1 of 9 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700"
+     },
+     {
+      "id": 489909130,
+      "absolute_url": "/docket/17442392/1709/2/epic-games-inc-v-apple-inc/",
+      "attachment_number": 2,
+      "date_created": "2026-08-13T16:28:01.051694-07:00",
+      "date_modified": "2026-08-22T17:35:03.828461-07:00",
+      "date_upload": "2026-08-13T16:28:34.745309-07:00",
+      "description": "Proposed Order",
+      "document_number": "1709",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1709.2.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 1,
+      "pacer_doc_id": "035027507492",
+      "page_count": 5,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1709-2 Filed 08/13/26 Page 1 of 5 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700"
+     }
+    ],
+    "date_modified": "2026-08-16T18:11:43.627865-07:00",
+    "date_filed": "2026-08-13",
+    "entry_number": 1709,
+    "description": "Administrative Motion to File Under Seal Portions of Its Remand Proffer and Supporting Expert Reports filed by Apple Inc.. (Attachments: # 1 Declaration of Sarah M. Ray, # 2 Proposed Order, # 3 Apple Inc.'s Remand Proffer, # 4 Exhibit 2, # 5 Exhibit 3)(Ray, Sarah) (Filed on 8/13/2026) (Entered: 08/13/2026)"
+   },
+   {
+    "id": 474396068,
+    "recap_documents": [
+     {
+      "id": 489895706,
+      "absolute_url": "/docket/17442392/1711/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-13T14:34:59.400078-07:00",
+      "date_modified": "2026-08-22T17:01:35.912396-07:00",
+      "date_upload": "2026-08-13T16:30:15.250274-07:00",
+      "description": "Certificate/Proof of Service",
+      "document_number": "1711",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1711.0.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027507612",
+      "page_count": 2,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1711 Filed 08/13/26 Page 1 of 2 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700 1"
+     }
+    ],
+    "date_modified": "2026-08-16T18:11:43.667251-07:00",
+    "date_filed": "2026-08-13",
+    "entry_number": 1711,
+    "description": "CERTIFICATE OF SERVICE by Apple Inc. re 1709 Administrative Motion to File Under Seal Portions of Its Remand Proffer and Supporting Expert Reports (Ray, Sarah) (Filed on 8/13/2026) (Entered: 08/13/2026)"
+   },
+   {
+    "id": 474396213,
+    "recap_documents": [
+     {
+      "id": 489895852,
+      "absolute_url": "/docket/17442392/1710/epic-games-inc-v-apple-inc/",
+      "attachment_number": null,
+      "date_created": "2026-08-13T14:35:08.647761-07:00",
+      "date_modified": "2026-08-22T17:51:42.355754-07:00",
+      "date_upload": "2026-08-13T16:29:41.638997-07:00",
+      "description": "Administrative Motion per Civil Local Rule 7-11",
+      "document_number": "1710",
+      "document_type": 1,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1710.0.pdf",
+      "is_available": true,
+      "is_sealed": false,
+      "ocr_status": 1,
+      "pacer_doc_id": "035027507508",
+      "page_count": 5,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1710 Filed 08/13/26 Page 1 of 5 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700 1"
+     },
+     {
+      "id": 489909411,
+      "absolute_url": "/docket/17442392/1710/1/epic-games-inc-v-apple-inc/",
+      "attachment_number": 1,
+      "date_created": "2026-08-13T16:29:27.797827-07:00",
+      "date_modified": "2026-08-22T17:35:08.684258-07:00",
+      "date_upload": "2026-08-13T16:29:42.681725-07:00",
+      "description": "Declaration of Sarah M. Ray",
+      "document_number": "1710",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1710.1.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027507509",
+      "page_count": 2,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1710-1 Filed 08/13/26 Page 1 of 2 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700"
+     },
+     {
+      "id": 489909412,
+      "absolute_url": "/docket/17442392/1710/2/epic-games-inc-v-apple-inc/",
+      "attachment_number": 2,
+      "date_created": "2026-08-13T16:29:27.873971-07:00",
+      "date_modified": "2026-08-22T16:56:34.139586-07:00",
+      "date_upload": "2026-08-13T16:29:43.286011-07:00",
+      "description": "Proposed Order",
+      "document_number": "1710",
+      "document_type": 2,
+      "filepath_local": "recap/gov.uscourts.cand.364265/gov.uscourts.cand.364265.1710.2.pdf",
+      "is_available": true,
+      "is_sealed": null,
+      "ocr_status": 2,
+      "pacer_doc_id": "035027507510",
+      "page_count": 2,
+      "plain_text": "Case 4:20-cv-05640-YGR Document 1710-2 Filed 08/13/26 Page 1 of 2 1 Sarah M. Ray (SBN 229670) James P. Rouhandeh (pro hac vice) [email removed] [email removed] 2 Aaron T. Chiu (SBN 287788) David B. Toscano (pro hac vice) [email removed] [email removed] 3 Brett M. Sandford (SBN 302072) DAVIS POLK & WARDWELL LLP [email removed] 450 Lexington Avenue 4 New York, New York 10017 Blake R. Davis (SBN 294360) Telephone: +1.212.450.4000 5 [email removed] LATHAM & WATKINS LLP Micah G. Block (SBN 270712) 6 505 Montgomery Street, Suite 2000 [email removed] San Francisco, California 94111-6538 DAVIS POLK & WARDWELL LLP 7 Telephone: +1.415.391.0600 900 Middlefield Road, Suite 200 Redwood City, California 94063 8 Gary S. Feinerman (pro hac vice) Telephone: +1.650.752.2000 [email removed] 9 LATHAM & WATKINS LLP 330 North Wabash Avenue, Suite 2800 10 Chicago, Illinois 60611-3695 Telephone: +1.312.876.7700"
+     }
+    ],
+    "date_modified": "2026-08-16T18:11:43.648640-07:00",
+    "date_filed": "2026-08-13",
+    "entry_number": 1710,
+    "description": "ADMINISTRATIVE MOTION for Referral to Settlement Conference filed by Apple Inc.. Responses due by 8/17/2026. (Attachments: # 1 Declaration of Sarah M. Ray, # 2 Proposed Order)(Ray, Sarah) (Filed on 8/13/2026) (Entered: 08/13/2026)"
+   }
+  ]
+ }
+}
