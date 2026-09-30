@@ -94,6 +94,16 @@ export function resolveRestriction(corpus: "recap" | "opinions", f: SearchFilter
   return { courts: null, note: null };
 }
 
+/** Whitespace cleanup that keeps paragraph breaks (opinion text is read, not just matched). */
+function normalizeParagraphs(raw: string): string {
+  return raw
+    .replace(/\r/g, "")
+    .replace(/[ \t\f\v]+/g, " ")
+    .replace(/ *\n */g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 export class CourtListenerProvider implements CourtDataProvider {
   readonly id: ProviderId;
   readonly label: string;
@@ -429,17 +439,18 @@ export class CourtListenerProvider implements CourtDataProvider {
     const cites = (c.citations ?? []).map((x) => [x.volume, x.reporter, x.page].filter(Boolean).join(" "));
     const url = c.absolute_url ? `https://www.courtlistener.com${c.absolute_url}` : null;
     const first = ops.ok ? ops.data.results[0] : undefined;
-    const text = first ? collapseWhitespace((first.plain_text || (first.html_with_citations ?? "").replace(/<[^>]+>/g, " ")) ?? "") : "";
+    const text = first ? normalizeParagraphs(first.plain_text || (first.html_with_citations ?? "").replace(/<\/p>|<br\s*\/?>/gi, "\n\n").replace(/<[^>]+>/g, " ")) : "";
+    const dk = docketRes && docketRes.ok ? docketRes.data : null;
     const record: CaseRecord = {
       key: `cl-cluster-${c.id}`,
       caseName,
       court,
-      docketNumber: docketRes && docketRes.ok ? docketRes.data.docket_number ?? null : null,
-      dateFiled: null,
-      dateTerminated: null,
+      docketNumber: dk?.docket_number ?? null,
+      dateFiled: dk?.date_filed ?? null,
+      dateTerminated: dk?.date_terminated ?? null,
       lastActivity: c.date_filed ?? null,
-      status: "unknown",
-      statusBasis: "Opinion records do not report case status",
+      status: dk?.date_terminated ? "closed" : "unknown",
+      statusBasis: dk?.date_terminated ? "Termination date on the court's docket for this decision" : "Opinion records do not report case status",
       category: court.type === "appellate" || court.type === "supreme" ? "appeal" : "unknown",
       natureOfSuit: null,
       cause: null,

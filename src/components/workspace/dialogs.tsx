@@ -236,3 +236,20 @@ export function UpgradeDialog({ feature, onClose, signedIn }: { feature: Feature
     </Sheet>
   );
 }
+
+/** Inline upsell card for a plan-gated panel. */
+export function LockedFeature({ feature, title, text, onUpgrade }: { feature: FeatureKey; title: string; text: string; onUpgrade: (f: FeatureKey) => void }) {
+  useEffect(() => track("paywall_viewed", { feature }), [feature]);
+  return (
+    <div className="rounded-2xl border border-line bg-elev p-8 text-center shadow-card">
+      <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-soft text-accent">
+        <Lock className="h-5 w-5" />
+      </div>
+      <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+      <p className="mx-auto mt-1.5 max-w-md text-sm text-muted">{text}</p>
+      <Button className="mt-4" onClick={() => onUpgrade(feature)}>
+        See plans
+      </Button>
+    </div>
+  );
+}

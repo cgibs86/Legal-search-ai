@@ -4,7 +4,7 @@ import { anonIdFrom, ANON_COOKIE, apiError, json, parseBody, readCookie } from "
 import { SearchBodySchema } from "@/lib/api/schemas";
 import { InvalidSearchError } from "@/lib/search/orchestrator";
 import { identityFor, searchForViewer } from "@/lib/search/service";
-import { applyPaywall, chooseVariant, lockedSummary, PAYWALL_COOKIE } from "@/lib/paywall/paywall";
+import { applyPaywall, chooseVariant, lockedSummary, PAYWALL_COOKIE, stripMentionContext } from "@/lib/paywall/paywall";
 import { limitSearch, looksAutomated } from "@/lib/security/ratelimit";
 import { getRepo } from "@/lib/data/repo";
 import { trackEvent } from "@/lib/analytics/track";
@@ -45,7 +45,7 @@ export async function POST(req: Request) {
       classification: result.classification,
       variants: result.variants,
       status: result.status,
-      hits: paywall.hits,
+      hits: can(viewer, "mentionIntelligence") ? paywall.hits : stripMentionContext(paywall.hits),
       summary: paywall.state.locked ? lockedSummary(result.summary) : result.summary,
       coverage: result.coverage,
       providerStatuses: result.providerStatuses,

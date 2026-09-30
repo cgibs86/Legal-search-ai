@@ -52,6 +52,7 @@ export async function POST(req: Request) {
   if (!gate.allowed) return gateError(gate);
   try {
     const { brief, cached } = await generateBrief(recordKey, sources);
+    gate.commit();
     return json({ brief, cached, usage: { used: gate.used ?? null, limit: gate.limit ?? null } });
   } catch (e) {
     if (e instanceof BriefError) return apiError(e.code === "not_configured" ? 503 : e.code === "refused" ? 422 : 502, e.code, e.message);

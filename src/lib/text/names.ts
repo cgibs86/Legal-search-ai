@@ -243,3 +243,59 @@ export function titleCase(s: string): string {
 export function slugify(s: string): string {
   return normalizeName(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
 }
+
+const PHONE = /\(?\b\d{3}\)?[-.\s]?\d{3}[-.]\d{4}\b/g;
+
+/**
+ * RECAP firm strings often embed contact details: "Direct: 212-474-1000, Cravath, Swaine &
+ * Moore, LLP" or "Wisconsin Department of Justice, Firm: 608-266-9945". Keep the name only.
+ */
+export function cleanFirmName(raw: string): string {
+  const s = collapseWhitespace(raw)
+    .replace(/^Direct:\s*[^,]*,\s*/i, "")
+    .replace(/,?\s*Firm:\s*[\d().\s+-]*$/i, "")
+    .replace(PHONE, "")
+    .replace(/\s*\([A-Z]{2}\)\s*$/, "")
+    .replace(/\s*,\s*(?=,)/g, "")
+    .replace(/^[\s,]+|[\s,]+$/g, "");
+  return collapseWhitespace(s);
+}
+
+/** Grouping key for firms: suffix-insensitive core name ("Munger, Tolles & Olson, LLP" = "Munger Tolles & Olson LLP"). */
+export function firmKey(name: string): string {
+  const cleaned = cleanFirmName(name);
+  return parseCompanyName(cleaned).core || normalizeName(cleaned);
+}
+
+const HONORIFIC = /^(?:mr|mrs|ms|miss|mx|dr|hon|honorable)\.?\s+/i;
+const GENERATIONAL_RE = /^(?:jr|sr|ii|iii|iv|v)\.?$/i;
+const ROLE_TAIL = /^(?:at|atty|attorney|esq\.?|esquire|counsel|pro se|.*\b(?:attorney|general|solicitor|counsel|prosecutor|defender|lead|notice[d]?)\b.*)$/i;
+
+/**
+ * Attorney strings from docket search carry honorifics and role tails: "Mr. Scott A. Keller,
+ * Attorney", "Amy Hanson, Assistant Attorney General". Returns the name and any stated role
+ * (generic "Attorney"/"AT" tails are dropped as noise). Generational suffixes are kept.
+ */
+export function cleanAttorneyName(raw: string): { name: string; role: string | null } {
+  const parts = collapseWhitespace(raw).replace(HONORIFIC, "").split(/\s*,\s*/);
+  const roles: string[] = [];
+  while (parts.length > 1) {
+    const last = parts[parts.length - 1];
+    if (GENERATIONAL_RE.test(last) || !ROLE_TAIL.test(last)) break;
+    parts.pop();
+    if (!/^(?:at|atty|attorney|esq\.?|esquire)$/i.test(last)) roles.unshift(last);
+  }
+  return { name: parts.join(", "), role: roles.length ? roles.join(", ") : null };
+}
+
+/** Rejects judge fields that are fragments ("III", "J.", "Per Curiam" stays valid). */
+export function cleanJudgeName(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const s = collapseWhitespace(raw).replace(HONORIFIC, "");
+  const letters = s
+    .split(/[\s,]+/)
+    .filter((w) => !GENERATIONAL_RE.test(w))
+    .join("")
+    .replace(/[^A-Za-z]/g, "");
+  return letters.length >= 3 ? s : null;
+}

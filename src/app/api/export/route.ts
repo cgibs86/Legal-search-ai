@@ -31,6 +31,7 @@ export async function POST(req: Request) {
     const result = await searchForViewer(viewer, body.data.search);
     const hits = body.data.ids?.length ? result.hits.filter((h) => body.data.kind === "search" && body.data.ids!.includes(h.id)) : result.hits;
     const rows = hitsToRows(hits);
+    gate.commit();
     if (body.data.format === "json") return file(JSON.stringify({ attribution: EXPORT_ATTRIBUTION, dataMode: result.dataMode, exportedAt: new Date().toISOString(), coverage: result.coverage, records: rows }, null, 2), `search-${stamp}.json`, "application/json");
     return file(`# ${EXPORT_ATTRIBUTION}${result.dataMode === "demo" ? " DEMO SNAPSHOT — not live data." : ""}\n${toCsv(rows)}`, `search-${stamp}.csv`, "text/csv; charset=utf-8");
   }
@@ -38,6 +39,7 @@ export async function POST(req: Request) {
   const res = await getPrimaryProvider().getDocket(body.data.docketId, { requestId: "export", userId: viewer.userId, plan: viewer.plan });
   if (!res.ok) return apiError(502, res.error.code, res.error.message);
   const entries = body.data.entryIds?.length ? res.data.entries.filter((e) => body.data.kind === "docket_entries" && body.data.entryIds!.includes(e.id)) : res.data.entries;
+  gate.commit();
   const rows = entriesToRows(res.data.record.caseName, entries, res.data.record.sources[0]?.url ?? null);
   if (body.data.format === "json") return file(JSON.stringify({ attribution: EXPORT_ATTRIBUTION, exportedAt: new Date().toISOString(), record: res.data.record, entries: rows }, null, 2), `docket-${body.data.docketId}-${stamp}.json`, "application/json");
   return file(`# ${EXPORT_ATTRIBUTION}\n${toCsv(rows)}`, `docket-${body.data.docketId}-${stamp}.csv`, "text/csv; charset=utf-8");

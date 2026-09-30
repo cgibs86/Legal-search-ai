@@ -1,4 +1,5 @@
 import type { DeliveredHit, MaskedHit, PaywallState, PaywallVariant, ResultSummary, SearchHit } from "@/lib/domain/types";
+import { isMasked } from "@/lib/domain/types";
 import type { PlanId } from "@/lib/config/plans";
 import { getPlan } from "@/lib/config/plans";
 
@@ -78,4 +79,18 @@ export function applyPaywall(hits: SearchHit[], plan: PlanId, signedIn: boolean,
 /** For locked results, keep the aggregate summary but drop per-court detail. */
 export function lockedSummary(summary: ResultSummary): ResultSummary {
   return { ...summary, courts: [] };
+}
+
+/**
+ * Mention Intelligence (the highlighted source context around a mention) is a paid
+ * feature, so the context is removed on the server for viewers without it. The UI still
+ * shows that N mentions exist, with the upgrade path.
+ */
+export function stripMentionContext<T extends DeliveredHit>(hits: T[]): T[] {
+  return hits.map((h) => {
+    if (isMasked(h)) return h;
+    const full = h as SearchHit;
+    if (!full.match.mentions.length) return h;
+    return { ...full, match: { ...full.match, mentions: full.match.mentions.map((m) => ({ ...m, snippet: null })) } } as T;
+  });
 }

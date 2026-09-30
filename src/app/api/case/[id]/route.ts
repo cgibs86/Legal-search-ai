@@ -15,6 +15,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
   if (!gate.allowed) return gateError(gate);
   const res = await getPrimaryProvider().getCase(id, { requestId: `case-${id}`, userId: viewer.userId, plan: viewer.plan });
   if (!res.ok) return apiError(res.error.code === "not_found" ? 404 : 502, res.error.code, res.error.message);
+  gate.commit();
   const { record, opinionText } = res.data;
   return json({
     record,

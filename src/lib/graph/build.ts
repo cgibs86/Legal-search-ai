@@ -1,5 +1,5 @@
 import type { SearchHit } from "@/lib/domain/types";
-import { captionSides, containsPhrase, isPlaceholderParty, normalizeName } from "@/lib/text/names";
+import { captionSides, containsPhrase, firmKey, isPlaceholderParty, normalizeName } from "@/lib/text/names";
 import { normalizeDocketNumber } from "@/lib/providers/courtlistener/mappers";
 
 /**
@@ -141,8 +141,8 @@ export function buildLitigationGraph(entityLabel: string, hits: SearchHit[], opt
       }
     }
     for (const f of r.firms.slice(0, MAX_PER_CASE)) {
-      const fNorm = normalizeName(f);
-      if (fNorm === entityNorm) continue;
+      const fNorm = firmKey(f);
+      if (fNorm === entityNorm || normalizeName(f) === entityNorm) continue;
       const fid = `firm:${fNorm}`;
       node(fid, "firm", f, r.key);
       edge(fid, caseId, "firm_in", "Firm listed among counsel on the docket", r.key);
@@ -187,7 +187,7 @@ export function buildInsights(entityLabel: string, nodes: GraphNode[], edges: Gr
     firm: (n, c) => ({ text: `${entityLabel} appears in ${c} matters where ${n.label} is listed among counsel.`, kind: "repeat_firm" }),
     attorney: (n, c) => ({ text: `${n.label} appears as counsel in ${c} of these matters.`, kind: "repeat_attorney" }),
     party: (n, c) => ({ text: `${entityLabel} and ${n.label} are both named in ${c} matters.`, kind: "repeat_co_party" }),
-    court: (n, c) => ({ text: `${c} ${plural(c, "matter is", "matters are")} in ${n.label}.`, kind: "repeat_court" }),
+    court: (n, c) => ({ text: `${c} ${plural(c, "matter is", "matters are")} in ${n.label}${n.label.endsWith(".") ? "" : "."}`, kind: "repeat_court" }),
     judge: (n, c) => ({ text: `Judge ${n.label} is listed on ${c} matters.`, kind: "repeat_judge" }),
   };
   for (const n of nodes) {
@@ -228,13 +228,27 @@ export function buildInsights(entityLabel: string, nodes: GraphNode[], edges: Gr
       const jl = nodes.find((n) => n.id === j)?.label;
       insights.push({ id: `ins:co:${pair}`, text: `${fl} appears before Judge ${jl} in ${keys.length} of these matters.`, nodeId: f, count: keys.length, recordKeys: keys, kind: "co_occurrence" });
     }
-    // Filing velocity by year (docket filing dates only).
-    const years = new Map<string, number>();
-    for (const h of hits) if (h.record.dateFiled) years.set(h.record.dateFiled.slice(0, 4), (years.get(h.record.dateFiled.slice(0, 4)) ?? 0) + 1);
-    const sorted = [...years.entries()].sort();
+    // Filing velocity by year (case filing dates only; opinions without a docket date are excluded and the text says so).
+    const years = new Map<string, string[]>();
+    for (const h of hits) {
+      const y = h.record.dateFiled?.slice(0, 4);
+      if (y) years.set(y, [...(years.get(y) ?? []), h.record.key]);
+    }
+    const sorted = [...years.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    const dated = sorted.reduce((n, [, keys]) => n + keys.length, 0);
     if (sorted.length >= 2) {
-      const peak = [...sorted].sort((a, b) => b[1] - a[1])[0];
-      insights.push({ id: "ins:velocity", text: `Most retrieved matters were filed in ${peak[0]} (${peak[1]}). Filing years span ${sorted[0][0]}–${sorted.at(-1)![0]}.`, nodeId: "entity", count: peak[1], recordKeys: [], kind: "velocity" });
+      const peak = [...sorted].sort((a, b) => b[1].length - a[1].length)[0];
+      const tied = sorted.filter(([, k]) => k.length === peak[1].length).length > 1;
+      if (!tied) {
+        insights.push({
+          id: "ins:velocity",
+          text: `Of ${dated} matters with a case filing date, the most (${peak[1].length}) were filed in ${peak[0]}; filing years span ${sorted[0][0]}–${sorted.at(-1)![0]}.`,
+          nodeId: "entity",
+          count: peak[1].length,
+          recordKeys: peak[1],
+          kind: "velocity",
+        });
+      }
     }
   }
   return insights.sort((a, b) => b.count - a.count).slice(0, 12);

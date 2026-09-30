@@ -157,7 +157,10 @@ function search(params: URLSearchParams): Page {
 function route(path: string, params: URLSearchParams): unknown | null {
   if (path === "search/") return search(params);
   const docket = path.match(/^dockets\/(\d+)\/$/);
-  if (docket) return docket[1] === "17442392" ? S.docket_17442392 : null;
+  if (docket) return docket[1] === "17442392" ? S.docket_17442392 : docket[1] === "65753722" ? S.docket_65753722 : null;
+  const cluster = path.match(/^clusters\/(\d+)\/$/);
+  if (cluster) return cluster[1] === "9395291" ? S.cluster_9395291 : null;
+  if (path === "opinions/") return params.get("cluster") === "9395291" ? S.opinions_9395291 : page([]);
   if (path === "parties/") return params.get("docket") === "17442392" ? S.parties_17442392 : page([]);
   if (path === "attorneys/") return page([]);
   if (path === "docket-entries/") return params.get("docket") === "17442392" && !params.get("cursor") ? S.docket_entries_17442392 : page([]);

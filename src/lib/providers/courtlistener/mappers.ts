@@ -15,7 +15,7 @@ import type {
   SnippetSegment,
   SourceRef,
 } from "@/lib/domain/types";
-import { captionSides, collapseWhitespace, findPhraseRanges, isPlaceholderParty, looksLikeOrganization } from "@/lib/text/names";
+import { captionSides, cleanAttorneyName, cleanFirmName, cleanJudgeName, collapseWhitespace, findPhraseRanges, firmKey, isPlaceholderParty, looksLikeOrganization, normalizeName } from "@/lib/text/names";
 import type { ProviderRecordHit } from "@/lib/providers/types";
 import {
   ATTORNEY_ROLES,
@@ -36,6 +36,31 @@ export interface MapContext {
   live: boolean;
   retrievedAt: string;
   getCourt: (id: string | null | undefined, name?: string | null, cite?: string | null) => CourtRef;
+}
+
+/** Deduplicated, cleaned attorney refs from docket-search strings (role tails kept as roles). */
+function cleanAttorneys(raw: string[]): AttorneyRef[] {
+  const out = new Map<string, AttorneyRef>();
+  for (const r of raw) {
+    const { name, role } = cleanAttorneyName(r);
+    if (!name) continue;
+    const key = normalizeName(name);
+    const cur = out.get(key) ?? { name, providerAttorneyId: null, roles: [], representing: [] };
+    if (role && !cur.roles.includes(role)) cur.roles.push(role);
+    out.set(key, cur);
+  }
+  return [...out.values()];
+}
+
+/** Firm names without embedded phone numbers, deduplicated by suffix-insensitive core. */
+function cleanFirms(raw: string[]): string[] {
+  const out = new Map<string, string>();
+  for (const r of raw) {
+    const name = cleanFirmName(r);
+    const key = firmKey(name);
+    if (name && key && !out.has(key)) out.set(key, name);
+  }
+  return [...out.values()];
 }
 
 export function absUrl(path: string | null | undefined): string | null {
@@ -252,11 +277,12 @@ export function mapDocketSearchResult(r: TDocketSearchResult, ctx: MapContext, p
     category: categoryFor(court, r.docketNumber ?? null, { suitNature: r.suitNature, jurisdictionType: r.jurisdictionType, chapter: r.chapter }),
     natureOfSuit: r.suitNature || null,
     cause: r.cause || null,
-    judge: r.assignedTo || null,
+    judge: cleanJudgeName(r.assignedTo),
     parties: captured ? listParties(partyNames) : captionParties(caseName),
     partyListCaptured: captured,
-    attorneys: uniq(r.attorney ?? []).map((n) => ({ name: n, providerAttorneyId: null, roles: [], representing: [] })),
-    firms: uniq(r.firm ?? []),
+    attorneys: cleanAttorneys(r.attorney ?? []),
+    // The firm field occasionally repeats an attorney's own name; that is not a firm.
+    firms: cleanFirms(r.firm ?? []).filter((f) => !cleanAttorneys(r.attorney ?? []).some((a) => normalizeName(a.name) === normalizeName(f))),
     opinions: [],
     documents: docs,
     sources: [source(ctx, "docket", String(r.docket_id), docketUrl, "CourtListener RECAP docket", r.meta?.timestamp)],
@@ -270,8 +296,8 @@ export function mapDocketSearchResult(r: TDocketSearchResult, ctx: MapContext, p
     record,
     evidence: {
       partyNames,
-      attorneyNames: r.attorney ?? [],
-      firmNames: r.firm ?? [],
+      attorneyNames: (r.attorney ?? []).map((n) => cleanAttorneyName(n).name),
+      firmNames: cleanFirms(r.firm ?? []),
       caseName,
       documents: docs,
       opinionSnippet: null,
@@ -295,7 +321,7 @@ export function mapOpinionSearchResult(r: TOpinionSearchResult, ctx: MapContext,
     citations: r.citation ?? [],
     status: r.status ?? null,
     type: first?.type ?? null,
-    judge: r.judge || null,
+    judge: cleanJudgeName(r.judge),
   };
   const snippet = first ? buildSnippet(first.snippet, null, phrases, "opinion_text") ?? excerpt(first.snippet, "opinion_text") : null;
   const opinionHit: DocumentHit = {
@@ -326,7 +352,7 @@ export function mapOpinionSearchResult(r: TOpinionSearchResult, ctx: MapContext,
     category: categoryFor(court, r.docketNumber ?? null, { suitNature: r.suitNature }),
     natureOfSuit: r.suitNature || null,
     cause: null,
-    judge: r.judge || null,
+    judge: cleanJudgeName(r.judge),
     parties: captionParties(caseName),
     partyListCaptured: false,
     attorneys: [],
@@ -386,14 +412,25 @@ function toIso(m: RegExpMatchArray): string | null {
 }
 
 /** Extracts explicit deadlines/settings stated in the entry text ("Responses due by 8/27/2026"). */
+/**
+ * Dates the docket text itself states ("Responses due by 8/17/2026", "Hearing set for …").
+ * The label is the short phrase right before the trigger, cut at the nearest punctuation,
+ * so "(Re 1703 Transcript Order ) Release of Transcript Restriction set for 11/16/2026"
+ * yields "Release of Transcript Restriction set for 11/16/2026".
+ */
 export function extractDeadlines(description: string): { date: string; text: string }[] {
   const out: { date: string; text: string }[] = [];
-  const re = /([A-Z][A-Za-z()'\s]{2,60}?)\s+(?:due by|set for|deadline(?: set)?(?: for)?|reset for|continued to)\s+(\d{1,2}\/\d{1,2}\/\d{2,4})/g;
+  const re = /\b(due by|set for|deadline(?: set)?(?: for)?|reset for|continued to)\s+(\d{1,2}\/\d{1,2}\/\d{2,4})/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(description)) !== null) {
     const dm = m[2].match(DATE_RE);
     const iso = dm ? toIso(dm) : null;
-    if (iso) out.push({ date: iso, text: collapseWhitespace(m[0]) });
+    if (!iso) continue;
+    const before = description.slice(Math.max(0, m.index - 120), m.index);
+    const segment = before.split(/[.;:()[\],]/).pop() ?? "";
+    const words = segment.trim().split(/\s+/).filter(Boolean).slice(-6);
+    const label = words.join(" ");
+    out.push({ date: iso, text: collapseWhitespace(`${label ? `${label} ` : ""}${m[1].toLowerCase()} ${m[2]}`) });
   }
   return out;
 }
@@ -480,7 +517,7 @@ export function mapDocketDetail(d: TDocket, ctx: MapContext): Omit<DocketDetail,
     category: categoryFor(court, d.docket_number ?? null, { suitNature: d.nature_of_suit, jurisdictionType: d.jurisdiction_type }),
     natureOfSuit: d.nature_of_suit || null,
     cause: d.cause || null,
-    judge: d.assigned_to_str || null,
+    judge: cleanJudgeName(d.assigned_to_str),
     parties: captionParties(caseName),
     partyListCaptured: false,
     attorneys: [],

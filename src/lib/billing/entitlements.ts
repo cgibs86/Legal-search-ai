@@ -15,20 +15,29 @@ export function requireFeature(viewer: Viewer, feature: FeatureKey): Gate {
 }
 
 /**
- * Meters a monthly-limited action. `subjectKey` makes repeat access to the same record in
- * the same month free (opening a docket twice counts once).
+ * Meters a monthly-limited action in two phases: the gate checks the allowance, and the
+ * caller invokes `commit()` only after the action succeeded, so a provider timeout or a
+ * failed AI call never consumes the user's allowance. `subjectKey` makes repeat access to
+ * the same record in the same month free (opening a docket twice counts once).
  */
+export type MeterGate = Gate & { commit: () => void };
+
+const noop = () => {};
+
 export async function meter(
   viewer: Viewer,
   opts: { feature: FeatureKey; kind: UsageKind; limitKey: keyof PlanLimits; subjectKey?: string; label: string },
-): Promise<Gate> {
+): Promise<MeterGate> {
   const f = requireFeature(viewer, opts.feature);
-  if (!f.allowed) return f;
+  if (!f.allowed) return { ...f, commit: noop };
   const userId = viewer.userId!;
   const limit = getPlan(viewer.plan).limits[opts.limitKey];
   const since = monthStartIso();
-  if (opts.subjectKey && (await hasUsageForSubject(userId, opts.kind, opts.subjectKey, since))) return { allowed: true, limit };
-  const used = await countUsage(userId, opts.kind, since, Boolean(opts.subjectKey));
+  const distinct = Boolean(opts.subjectKey);
+  if (opts.subjectKey && (await hasUsageForSubject(userId, opts.kind, opts.subjectKey, since))) {
+    return { allowed: true, used: await countUsage(userId, opts.kind, since, distinct), limit, commit: noop };
+  }
+  const used = await countUsage(userId, opts.kind, since, distinct);
   if (used >= limit) {
     return {
       allowed: false,
@@ -36,10 +45,20 @@ export async function meter(
       message: `You've used all ${limit} ${opts.label} included this month on ${getPlan(viewer.plan).name}.`,
       used,
       limit,
+      commit: noop,
     };
   }
-  recordUsage({ kind: opts.kind, userId, subjectKey: opts.subjectKey ?? null });
-  return { allowed: true, used: used + 1, limit };
+  let committed = false;
+  return {
+    allowed: true,
+    used: used + 1,
+    limit,
+    commit: () => {
+      if (committed) return;
+      committed = true;
+      recordUsage({ kind: opts.kind, userId, subjectKey: opts.subjectKey ?? null });
+    },
+  };
 }
 
 export function meterRecordView(viewer: Viewer, recordKey: string) {

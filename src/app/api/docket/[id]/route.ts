@@ -19,6 +19,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
     const status = res.error.code === "not_found" ? 404 : res.error.code === "quota" ? 503 : res.error.code === "timeout" ? 504 : 502;
     return apiError(status, res.error.code, res.error.message);
   }
+  gate.commit();
   if (viewer.userId && (await countUsage(viewer.userId, "record_view", "1970-01-01T00:00:00Z").catch(() => 2)) <= 1) {
     trackEvent("first_result_opened", { userId: viewer.userId });
   }
